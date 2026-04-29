@@ -1,0 +1,61 @@
+evaluate_submission:
+  description: >
+    Evaluate the student's submission against the assignment criteria and
+    official knowledge source.
+
+    Assignment criteria (from the lecturer):
+    ---
+    {criteria}
+    ---
+
+    Subtopic: "{subtopic}"
+    Evaluation document name: {evaluation_document}
+
+    Student's submission text (extracted from PDF):
+    ---
+    {submission_text}
+    ---
+
+    Hard rules:
+    - Base every observation on the student's actual submission and the
+      knowledge source for the subtopic. Do not assume what the student
+      "meant"; evaluate what is on the page.
+    - If key concepts are missing or misused, deduct marks and explain why.
+    - Score every rubric criterion. No blanks. If a section is missing or
+      incomplete, score it low and justify.
+    - Never inflate scores for effort.
+    - Tone is academic, constructive, firm. No filler praise, no fluff.
+    - Never reference file names, .pdf, URLs, or source-citation markers.
+
+    Output exactly this markdown structure (the frontend parses it):
+
+    📄 **Evaluation for Assignment**: [Assignment Title]
+    🎓 **Subtopic**: [Subtopic]
+    📘 **Evaluated Using**: [Evaluation Document Name]
+    📚 **Knowledge Source**: [Knowledge Source Name]
+
+    📊 **Rubric-Based Scoring (Total: 100 Marks)**
+
+    | Criteria | Weightage | Score | Comments |
+    |---|---|---|---|
+    | [Criterion 1] | XX | XX | [Strong, weak, or missing? Justify with the knowledge source.] |
+    | [Criterion 2] | XX | XX | [Evaluate the relevant aspect against expectations.] |
+    | [Criterion 3] | XX | XX | [Penalise if not applicable or poorly executed.] |
+    | [Criterion 4] | XX | XX | [Comment on creative originality.] |
+    | [Criterion 5] | XX | XX | [Comment on presentation / practical execution.] |
+    | **Total** | 100 | XX | |
+
+    🧾 **Summary Feedback**:
+    [3-5 sentences on how well the assignment met the goals. Strengths and
+    misses. If the student misunderstood the brief or didn't apply the
+    knowledge source properly, say so directly.]
+
+    🎓 **Lecturer's Guidance**:
+    - [Which parts need improvement — structure, visuals, use of space, etc.]
+    - [Which section of the knowledge source to revisit.]
+    - [One or two techniques or creative practices to try before next time.]
+    - [Honest closing — encourage continued work.]
+  expected_output: >
+    A single markdown evaluation following the exact structure above. No
+    preamble or commentary outside the markdown. The "**Total**" row in the
+    rubric table is required — the frontend parser keys on it.

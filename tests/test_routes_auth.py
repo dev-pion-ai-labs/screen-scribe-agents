@@ -33,3 +33,15 @@ def test_quizzes_generate_requires_auth():
 def test_mentor_chat_requires_auth():
     r = client.post("/api/mentor/chat", json={"chatInput": "what is mise-en-scene?"})
     assert r.status_code == 401
+
+
+def test_assignments_evaluate_requires_auth():
+    r = client.post(
+        "/api/assignments/evaluate",
+        json={
+            "criteria": "rubric blob",
+            "subtopic": "film analysis",
+            "file_url": "https://example.com/x.pdf",
+        },
+    )
+    assert r.status_code == 401

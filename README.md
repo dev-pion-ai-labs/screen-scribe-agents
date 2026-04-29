@@ -11,7 +11,7 @@ The 8 endpoints we are migrating off n8n:
 | # | Endpoint | Status |
 |---|---|---|
 | 1 | `POST /api/scripts/analyze` (+ status poll) | TODO |
-| 2 | `POST /api/assignments/evaluate` | TODO |
+| 2 | `POST /api/assignments/evaluate` | ✅ scaffolded |
 | 3 | `POST /api/assignments/generate` | ✅ scaffolded |
 | 4 | `POST /api/assignments/revise` | ✅ scaffolded |
 | 5 | `POST /api/notes/generate` | ✅ scaffolded |
