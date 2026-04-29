@@ -1,0 +1,48 @@
+write_quiz:
+  description: >
+    Subtopic: "{subtopic}"
+    Reading materials: {reading_materials}
+
+    Create exactly 5 MCQ questions based solely on the content of the reading
+    materials above, scoped to the subtopic.
+
+    Output a single JSON object (no markdown, no preamble, no commentary)
+    with key "all_questions" mapping to an array of 5 objects, each with:
+      - "question"           (string)
+      - "options"            (array of exactly 4 strings, all distinct)
+      - "correct_option_id"  (integer 0-3, index of correct answer)
+      - "Correct_answer_explanation" (2-3 sentence explanation grounded in the
+        reading materials)
+
+    Rules:
+    - Each question's correct_option_id must vary across the 5 — do not put
+      the right answer at the same index every time. Aim for a roughly random
+      distribution.
+    - All 4 options per question must be distinct strings.
+    - Never mention file extensions, source citations like "【…†source】",
+      reading material file names, or URLs in question/answer text.
+    - Never include emojis, jokes, casual tone, or AI references.
+    - Strictly output JSON. The first character of the response must be `{{`
+      and the last must be `}}`.
+
+    Example shape:
+
+    {{
+      "all_questions": [
+        {{
+          "question": "What is the primary purpose of color grading in film post-production?",
+          "options": [
+            "To correct audio levels",
+            "To enhance the visual tone and mood of the film",
+            "To edit the script for continuity",
+            "To adjust the film's running time"
+          ],
+          "correct_option_id": 1,
+          "Correct_answer_explanation": "Color grading shapes the visual tone and emotional mood of a film by adjusting hues, saturation, and contrast across shots."
+        }}
+      ]
+    }}
+  expected_output: >
+    A single valid JSON object with the key "all_questions" containing 5 MCQ
+    objects in the schema above. No markdown fences, no commentary, no extra
+    keys at the top level.

@@ -1,0 +1,142 @@
+generate_assignment:
+  description: >
+    Generate one original university-level assignment for the subtopic
+    "{subtopic}". The assignment must follow the structure, tone, and
+    expectations of this institutional evaluation document:
+    {evaluation_document}.
+
+    Hard rules:
+    - Base the assignment on the official knowledge source for the subtopic.
+      Do not invent theories, frameworks, or external references.
+    - The task must be practical and activity-based, not a summary or theory
+      essay. Examples: rewriting a scene's emotional arc, blocking a scene,
+      recording a video exercise, building a storyboard or shooting script,
+      reflecting on an in-class group activity.
+    - Never reference file extensions (.pdf, .docx), source tags, or URLs.
+    - Never mention due dates.
+    - Never refer to yourself, AI, or roles.
+
+    Rubric guidance — total 100 marks. If the evaluation document name above
+    matches one of these activity flags:
+      Shoot, Practical class with acting dept,
+      group discussion - culminated three modules above, theory,
+      in class exercise
+    then use this default rubric:
+      Acting Techniques                                       20
+      Visual Storytelling (Blocking, Staging, Composition)    20
+      Dialogue and Structure                                  20
+      Improvisation and Performance Nuance                    20
+      Use of Digital Tools, VFX & Story Structure             20
+    Otherwise infer rubric criteria from the evaluation document name; keep
+    the total at 100.
+
+    Output exactly the markdown structure below.
+
+    📄 **Title**: [Insert Assignment Title Here]
+
+    📝 **Assignment**:
+
+    **Objective**:
+    [What is the goal of this assignment? Briefly describe what it helps the
+    student learn or apply.]
+
+    **Task**:
+    [Activity-based instructions. Include examples, prompts, or staging
+    directions where appropriate.]
+
+    **Submission Format**:
+    [What the student must submit — recordings, sketches, diagrams, short
+    write-ups, etc.]
+
+    📊 **Rubric for Evaluation (Total: 100 Marks)**
+
+    | Criteria | Weightage |
+    |---|---|
+    | [Criterion 1] | XX |
+    | [Criterion 2] | XX |
+    | [Criterion 3] | XX |
+    | [Criterion 4] | XX |
+    | [Criterion 5] | XX |
+
+    You can learn more using this knowledge source: **[Insert Source Name]**
+  expected_output: >
+    A single markdown assignment following the structure above. No preamble,
+    no commentary outside the markdown.
+
+revise_assignment:
+  description: >
+    Revise the existing assignment based on the lecturer's revision notes.
+    Maintain the structure and tone of the original; reframe only what's
+    necessary.
+
+    Subtopic: "{subtopic}"
+    Evaluation document: {evaluation_document}
+
+    Original assignment:
+    ---
+    {content}
+    ---
+
+    Lecturer's revision notes:
+    ---
+    {changes}
+    ---
+
+    How to interpret revision notes:
+    - "Make it more practical" → add production tasks, observational work, or
+      performance elements.
+    - "Add relevance to performance" → integrate actor blocking, movement
+      studies, or scene rehearsal as required.
+    - "Clarify learning outcome" → refine objectives to specify what students
+      will learn or apply.
+
+    Hard rules (same as generation):
+    - Stay grounded in the assigned knowledge source for the subtopic.
+    - Never reference unrelated material or invent content.
+    - No file extensions, URLs, or source citations.
+    - Mention reading material titles only at the end (Knowledge Source Used).
+    - Keep the rubric structure from the evaluation document; only change
+      scores if explicitly required by the lecturer's notes.
+    - If the evaluation document matches one of these activity flags
+      (Shoot, Practical class, Group exercise, In-class work, Performance-based
+      module), default to the standard performance rubric:
+        Acting Techniques                                       20
+        Visual Storytelling (Blocking, Staging, Composition)    20
+        Dialogue and Structure                                  20
+        Improvisation and Performance Nuance                    20
+        Use of Digital Tools, VFX & Story Structure             20
+    - Never rewrite the full assignment unless major revision is requested.
+
+    Output exactly:
+
+    📄 **Title**: [Updated Title if revised]
+
+    📝 **Assignment**
+
+    **Objective**:
+    [Updated or refined assignment objective — only change if needed]
+
+    **Task**:
+    [Rewritten task instructions — include all changes made from the original,
+    structured clearly]
+
+    **Submission Format**:
+    [Update only if changes were requested or implied]
+
+    📊 **Rubric for Evaluation (Total: 100 Marks)**
+
+    | Criteria | Weightage |
+    |---|---|
+    | [Criterion 1] | XX |
+    | [Criterion 2] | XX |
+    | [Criterion 3] | XX |
+    | [Criterion 4] | XX |
+    | [Criterion 5] | XX |
+
+    ---
+
+    📚 **Knowledge Source Used**:
+    [The reading material or reference used — without file extensions or links]
+  expected_output: >
+    A single markdown revised assignment following the structure above.
+    No preamble or commentary outside the markdown.

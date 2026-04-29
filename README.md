@@ -12,10 +12,10 @@ The 8 endpoints we are migrating off n8n:
 |---|---|---|
 | 1 | `POST /api/scripts/analyze` (+ status poll) | TODO |
 | 2 | `POST /api/assignments/evaluate` | TODO |
-| 3 | `POST /api/assignments/generate` | TODO |
-| 4 | `POST /api/assignments/revise` | TODO |
+| 3 | `POST /api/assignments/generate` | ✅ scaffolded |
+| 4 | `POST /api/assignments/revise` | ✅ scaffolded |
 | 5 | `POST /api/notes/generate` | ✅ scaffolded |
-| 6 | `POST /api/quizzes/generate` | TODO |
+| 6 | `POST /api/quizzes/generate` | ✅ scaffolded |
 | 7 | `POST /api/mentor/chat` | TODO |
 | 8 | `POST /api/mentor/quiz` | ⚠️ deferred — original n8n workflow not found, see `migratetocrew.md` |
 
