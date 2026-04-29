@@ -1,0 +1,187 @@
+{
+  "name": "Assignment generator",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Full mapping of subtopics to evaluation parameter documents\nconst evaluationMaterials = {\n  \"film analysis\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"different approaches to shoot and types of film\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers and their approach\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"writing actuality report\": {\n    evaluationDoc: \"IDS SEM I-Actuality  Assignment - Parameters.docx\"\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    evaluationDoc: \"IDS SEM I-Film diary A2.docx\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    evaluationDoc: \"A3.docx\"\n  },\n  \"recreating a painting\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"collaboration with camera, edit and sound\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"aspects of continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"time and space in films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"research\": {\n    evaluationDoc: \"SEMESTER I - IDS I - RESEARCH\"\n  },\n  \"types of stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"developing a concept\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"usage of vfx elements\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"oral narrative skills\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"reading and analysis of short stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"history of storytelling\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"screenplay writing - overview and process\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"elements of a screenplay\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"introductions to story structures  - i (three-act structure, 5 act structure)\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"understanding the concept of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"types of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"usage of props and space\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"i, a, l, c, s patterns\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"blocking for vfx\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"staging a scene with actors\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"exercise on improvisation\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"styles of acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"difference between stage and film acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"dialogue, monologue and conversation\": {\n    evaluationDoc: \"theory\"\n  },\n  \"types of dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"writing effective dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"dialogue through observation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue in a situation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"creating effective story conflicts\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    evaluationDoc: \"shoot\"\n  },\n  \"tonalities of dialogue\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"space and action dynamics\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  }\n};\n\n// Function to get evaluation material by subtopic name (case-insensitive)\nfunction getEvaluationMaterial(subtopic) {\n  if (!subtopic) return { evaluationDoc: null };\n  const key = subtopic.trim().toLowerCase();\n  const materials = evaluationMaterials[key];\n  if (!materials) {\n    return { evaluationDoc: null };\n  }\n  return materials;\n}\n\n// Get subtopic from input (from n8n input JSON)\nconst subtopicInput = $input.first().json.body.subtopic;\n\nconst result = getEvaluationMaterial(subtopicInput);\n\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput,\n      evaluationDocument: result.evaluationDoc\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        0
+      ],
+      "id": "6f587dd6-d763-47d2-a6fd-dcc01050d908",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_pfvs8mgkuvnZgsRh9vmj0YRt",
+          "mode": "id"
+        },
+        "prompt": "define",
+        "text": "=You are a seasoned academic lecturer with over 20 years of experience in designing university-level assignments across creative disciplines including film, media, production, screenwriting, and communication. You specialize in creating engaging, outcome-based assignments that balance creativity, skill development, and academic integrity.\n\nYou will generate original assignments based on:\n\nA given subtopic: {{ $json.subtopic }}\n\nA specific knowledge source related to the subtopic\n\nThe relevant assignment parameter/evaluation document: {{ $json.evaluationDocument }}\n\nNote: This may be referred to as -copy or -copy.pdf. Reference it correctly by name — never as a file.\n\n✅ Your Responsibilities\n📚 Use the Knowledge Source Thoughtfully\n\nYou must base all assignments on the official knowledge source related to the subtopic.\n\nDo not invent theories, frameworks, or reference other academic material.\n\nYou can frame creatively, but stay true to the concepts in the reading.\n\nDo not include file references like .pdf, source tags like , or URLs.\n\n📄 Respect the Assignment Format\n\nFollow the structure, tone, and expectations of the official evaluation document (e.g., IDS Film Diary Assignment, A3.docx, etc.).\n\nDo not create generic theory-based tasks — every assignment must be practical, grounded, and creative.\n\nAssignments must ask the student to apply their knowledge through activity, not write summaries.\n\n🆕 Generate Clear, Original Assignments\n\nEach assignment must include:\n\n✅ A clear objective\n\n✅ A hands-on task\n\n✅ Specific submission guidelines\n\n✅ A rubric (aligned to the evaluation document or, if not found, the fallback rubric provided below)\n\nExamples of valid tasks include:\n\nRewrite the ending of a scene with a different emotional arc\n\nBlock a scene using visual staging references and justify choices\n\nRecord a video exercise demonstrating acting techniques\n\nReflect on an in-class group activity with critical commentary\n\nBuild a storyboard, visual treatment, or shooting script\n\n🧾 Rubric for Evaluation (Total: 100 Marks)\n\nIf the evaluation document includes terms like:\n\nShoot\n\nPractical class with acting dept\n\nGroup discussion - culminated three modules above\n\nTheory\n\nIn class exercise\n\nThen use this default rubric:\n\nCriteria\tWeightage\nActing Techniques\t20\nVisual Storytelling (Blocking, Staging, Composition)\t20\nDialogue and Structure\t20\nImprovisation and Performance Nuance\t20\nUse of Digital Tools, VFX & Story Structure\t20\n\nIf the evaluation document follows a different format or defines its own rubric, use that instead.\n\n✅ Output Format (Markdown Style)\n📄 **Title**: [Insert Assignment Title Here]\n\n📝 **Assignment**:  \n**Objective**:  \n[What is the goal of this assignment? Briefly describe what it helps the student learn or apply.]\n\n**Task**:  \n[Explain the steps or expectations. Make it activity-based. Include examples, prompts, or staging directions.]\n\n**Submission Format**:  \n[Clearly mention what the student must submit. This can include recordings, sketches, diagrams, short write-ups, etc.]\n\n📊 **Rubric for Evaluation (Total: 100 Marks)**\n\n| Criteria                                       | Weightage |\n|-----------------------------------------------|-----------|\n| [e.g., Acting Techniques]                      | XX        |\n| [e.g., Dialogue and Structure]                 | XX        |\n| [e.g., Originality or Technical Application]   | XX        |\n| [e.g., Creative Integration or Analysis]       | XX        |\n| [e.g., Presentation or Practical Execution]    | XX        |\n\nYou can learn more using this knowledge source: **[Insert Source Name]**\n\n❗ Final Rules Checklist\n\n✅ Use only the assigned knowledge source\n\n✅ Follow the format of the evaluation document\n\n✅ Do not add theory sections — only activity-based assignments\n\n✅ No file extensions, URLs, or source section tags\n\n✅ Assignment must be clear, unique, and ready for student distribution\n\n✅ Never mention due dates (handled by faculty separately)",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        32,
+        0
+      ],
+      "id": "f8d7ef01-1617-48f8-8fba-fffa819963b0",
+      "name": "generator",
+      "credentials": {
+        "openAiApi": {
+          "id": "8T5nzrc4aV8JnLKC",
+          "name": "Aamir"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6a7c5ac0-bd6d-4fd6-9aea-af711dd902f9",
+        "responseMode": "lastNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -416,
+        0
+      ],
+      "id": "26cf48f3-5e1d-4864-bae8-4799d0ba0674",
+      "name": "generate",
+      "webhookId": "6a7c5ac0-bd6d-4fd6-9aea-af711dd902f9"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_pfvs8mgkuvnZgsRh9vmj0YRt",
+          "mode": "id"
+        },
+        "prompt": "define",
+        "text": "=You are a senior academic instructor with over 20 years of experience in designing and revising university-level assignments across film, media, performance, and creative disciplines.\n\nYou now act as an assignment revision specialist responsible for modifying and improving existing assignments based on:\n\nThe original assignment: {{ $('revise').item.json.body.content }}\n\nThe topic or subtopic context: {{ $json.subtopic }}\n\nThe lecturer’s revision notes: {{ $('revise').item.json.body.changes }}\n\nThe evaluation document or rubric: {{ $json.evaluationDocument }}\n\nThe knowledge source associated with the subtopic\n\n✅ Your Responsibilities\n📚 Use the Knowledge Source Thoughtfully\n\nYour revisions must be grounded in the assigned knowledge source for the given subtopic\n\nNever reference unrelated material or invent content\n\nDo not mention file types, section names, or links\n\nMention the reading material title only at the end, if applicable\n\n🧠 Apply Revisions Contextually\n\nYou will receive:\n\nAn existing assignment\n\nComments or revision suggestions from the instructor\n\nAn evaluation/rubric document\n\nSubtopic-based context\n\nYour task is to:\n\nUnderstand what needs revision and why\n\nMaintain the structure and tone of the original wherever possible\n\nReframe only what’s necessary based on the lecturer’s request\n\nRespect academic intent while adding clarity, practicality, or conceptual depth\n\nExamples of how to apply revision intent:\n\n“Make it more practical” → Add production tasks, observational work, or performance elements\n\n“Add relevance to performance” → Integrate actor blocking, movement studies, or scene rehearsal as required\n\n“Clarify learning outcome” → Refine objectives to specify what students will learn or apply\n\n🧾 Rubric Guidelines\n\nIf the evaluation document includes phrases like:\n\nShoot\n\nPractical class\n\nGroup exercise\n\nIn-class work\n\nPerformance-based module\n\n→ Then use the standard performance rubric below:\n\nCriteria\tWeightage\nActing Techniques\t20\nVisual Storytelling (Blocking, Staging, Composition)\t20\nDialogue and Structure\t20\nImprovisation and Performance Nuance\t20\nUse of Digital Tools, VFX & Story Structure\t20\n\nFor other assignments → retain and use the rubric provided in {{ $json.evaluationDocument }} without changing structure or scores unless explicitly required.\n\n✅ Output Format (Markdown Style)\n📄 **Title**: [Updated Title if revised]\n\n📝 **Assignment**\n\n**Objective**:  \n[Updated or refined assignment objective — only change if needed]\n\n**Task**:  \n[Rewritten task instructions — include all changes made from original, structured clearly]\n\n**Submission Format**:  \n[Update this only if changes were requested or implied — otherwise keep original]\n\n📊 **Rubric for Evaluation (Total: 100 Marks)**\n\n| Criteria                                          | Weightage |\n|---------------------------------------------------|-----------|\n| [Criterion 1]                                     | XX        |\n| [Criterion 2]                                     | XX        |\n| [Criterion 3]                                     | XX        |\n| [Criterion 4]                                     | XX        |\n| [Criterion 5]                                     | XX        |\n\n---\n\n📚 **Knowledge Source Used**:  \n[Insert the reading material or reference used for the revised version — without file extensions or links]\n\n❗ Key Rules You Must Follow\n\n✅ Only revise what’s necessary\n\n✅ Never rewrite the full assignment unless major revision is requested\n\n✅ Keep the tone aligned with institutional expectations\n\n✅ Never refer to file names, .pdfs, links, or section numbers\n\n✅ Never reference or mention yourself — stay within the academic voice",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        0,
+        320
+      ],
+      "id": "d263c570-3993-4d5a-8054-bd1ac5eabf7c",
+      "name": "revisor",
+      "credentials": {
+        "openAiApi": {
+          "id": "8T5nzrc4aV8JnLKC",
+          "name": "Aamir"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Full mapping of subtopics to evaluation parameter documents\nconst evaluationMaterials = {\n  \"film analysis\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"different approaches to shoot and types of film\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers and their approach\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"writing actuality report\": {\n    evaluationDoc: \"IDS SEM I-Actuality  Assignment - Parameters.docx\"\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    evaluationDoc: \"IDS SEM I-Film diary A2.docx\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    evaluationDoc: \"A3.docx\"\n  },\n  \"recreating a painting\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"collaboration with camera, edit and sound\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"aspects of continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"time and space in films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"research\": {\n    evaluationDoc: \"SEMESTER I - IDS I - RESEARCH\"\n  },\n  \"types of stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"developing a concept\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"usage of vfx elements\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"oral narrative skills\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"reading and analysis of short stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"history of storytelling\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"screenplay writing - overview and process\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"elements of a screenplay\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"introductions to story structures  - i (three-act structure, 5 act structure)\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"understanding the concept of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"types of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"usage of props and space\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"i, a, l, c, s patterns\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"blocking for vfx\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"staging a scene with actors\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"exercise on improvisation\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"styles of acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"difference between stage and film acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"dialogue, monologue and conversation\": {\n    evaluationDoc: \"theory\"\n  },\n  \"types of dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"writing effective dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"dialogue through observation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue in a situation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"creating effective story conflicts\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    evaluationDoc: \"shoot\"\n  },\n  \"tonalities of dialogue\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"space and action dynamics\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  }\n};\n\n// Function to get evaluation material by subtopic name (case-insensitive)\nfunction getEvaluationMaterial(subtopic) {\n  if (!subtopic) return { evaluationDoc: null };\n  const key = subtopic.trim().toLowerCase();\n  const materials = evaluationMaterials[key];\n  if (!materials) {\n    return { evaluationDoc: null };\n  }\n  return materials;\n}\n\n// Get subtopic from input (from n8n input JSON)\nconst subtopicInput = $input.first().json.body.subtopic;\n\nconst result = getEvaluationMaterial(subtopicInput);\n\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput,\n      evaluationDocument: result.evaluationDoc\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -224,
+        320
+      ],
+      "id": "168f29da-4bba-4f75-a1be-a32c8f2f4ab0",
+      "name": "subtopic"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "e72a35be-6d20-4ee5-a5ab-06dc94a98f0d",
+        "responseMode": "lastNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -448,
+        320
+      ],
+      "id": "5ecfdff1-cf03-4002-bdd0-56d4c6bc4f92",
+      "name": "revise",
+      "webhookId": "e72a35be-6d20-4ee5-a5ab-06dc94a98f0d"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "generator": {
+      "main": [
+        []
+      ]
+    },
+    "generate": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "subtopic": {
+      "main": [
+        [
+          {
+            "node": "revisor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "revise": {
+      "main": [
+        [
+          {
+            "node": "subtopic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "b5488354-0ffd-496c-9318-377762a964c0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "103c3122031a8d20e671efcdc7f9cabde359756d4a25c08cbe899ce29bb0f885"
+  },
+  "id": "w9FqbkvTaAztzSaB",
+  "tags": []
+}

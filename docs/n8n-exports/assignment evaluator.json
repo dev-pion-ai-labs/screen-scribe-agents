@@ -1,0 +1,155 @@
+{
+  "name": "assignment evaluator",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        112,
+        0
+      ],
+      "id": "1729fe7a-1d28-400b-8e9a-f3f1ef57f71a",
+      "name": "Extractor"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.body.file_url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -80,
+        0
+      ],
+      "id": "038bec93-632e-4a1f-a404-a1fc3127874f",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Full mapping of subtopics to evaluation parameter documents\nconst evaluationMaterials = {\n  \"film analysis\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"different approaches to shoot and types of film\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers and their approach\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    evaluationDoc: \"IDS SEM I-Film diary   Assignment - Parameters.docx\"\n  },\n  \"writing actuality report\": {\n    evaluationDoc: \"IDS SEM I-Actuality  Assignment - Parameters.docx\"\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    evaluationDoc: \"IDS SEM I-Film diary A2.docx\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    evaluationDoc: \"A3.docx\"\n  },\n  \"recreating a painting\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"collaboration with camera, edit and sound\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    evaluationDoc: \"Assignment - Parameters.docx\"\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"aspects of continuity\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"time and space in films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    evaluationDoc: \"A5.docx\"\n  },\n  \"research\": {\n    evaluationDoc: \"SEMESTER I - IDS I - RESEARCH\"\n  },\n  \"types of stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"developing a concept\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"usage of vfx elements\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"oral narrative skills\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"reading and analysis of short stories\": {\n    evaluationDoc: \"A1.docx\"\n  },\n  \"history of storytelling\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"screenplay writing - overview and process\": {\n    evaluationDoc: \"A4.docx\"\n  },\n  \"elements of a screenplay\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    evaluationDoc: \"IDS SEM I-SPW\"\n  },\n  \"screenwriting softwares\": {\n    evaluationDoc: \"Demo\"\n  },\n  \"introductions to story structures  - i (three-act structure, 5 act structure)\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    evaluationDoc: \"A6.docx A7.docx\"\n  },\n  \"understanding the concept of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"types of staging and blocking\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"usage of props and space\": {\n    evaluationDoc: \"IDS SEM II-Blocking and Staging\"\n  },\n  \"i, a, l, c, s patterns\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"blocking for vfx\": {\n    evaluationDoc: \"Shoot\"\n  },\n  \"staging a scene with actors\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"exercise on improvisation\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"styles of acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"difference between stage and film acting\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    evaluationDoc: \"Practical class with acting dept\"\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    evaluationDoc: \"group discussion - culminated three modules above\"\n  },\n  \"dialogue, monologue and conversation\": {\n    evaluationDoc: \"theory\"\n  },\n  \"types of dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"writing effective dialogue\": {\n    evaluationDoc: \"theory\"\n  },\n  \"dialogue through observation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue in a situation\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"creating effective story conflicts\": {\n    evaluationDoc: \"in class exercise\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    evaluationDoc: \"shoot\"\n  },\n  \"tonalities of dialogue\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"space and action dynamics\": {\n    evaluationDoc: \"IDS SEM II - parameters_dialogue\"\n  }\n};\n\n// Function to get evaluation material by subtopic name (case-insensitive)\nfunction getEvaluationMaterial(subtopic) {\n  if (!subtopic) return { evaluationDoc: null };\n  const key = subtopic.trim().toLowerCase();\n  const materials = evaluationMaterials[key];\n  if (!materials) {\n    return { evaluationDoc: null };\n  }\n  return materials;\n}\n\n// Get subtopic from input (from n8n input JSON)\nconst subtopicInput = $('Webhook').first().json.body.subtopic;\n\nconst result = getEvaluationMaterial(subtopicInput);\n\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput,\n      evaluationDocument: result.evaluationDoc\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        288,
+        0
+      ],
+      "id": "a6b5fcc9-88fd-45a9-8ba6-bbc1b547ebc6",
+      "name": "analyz"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_JAZ3hgBRQzs8i04PMb1rmiJW",
+          "mode": "id"
+        },
+        "prompt": "define",
+        "text": "=You are a senior academic lecturer with over 20 years of experience in evaluating assignments in film, media, and creative disciplines. You regularly assess student submissions using detailed rubrics and provide professional, high-quality academic feedback that helps them understand what worked, what didn’t, and where to improve.\n\nWhen provided with:\n\n✅ Assignment criteria: {{ $('HTTP Request').item.json.body.criteria }}\n\n✅ Subtopic: {{ $json.subtopic }}\n\n✅ Evaluation document: {{ $('Extractor').item.json.text }}\n\n✅ Official knowledge source: {{ $json.evaluationDocument }}\n\nYour responsibility is to evaluate the student’s submission in an academic manner — fairly, strictly, and with complete alignment to the assignment expectations and the related knowledge material.\n\n✅ What You Must Do\n📚 1. Use the Knowledge Source\n\nAll your observations must be rooted in the official knowledge source associated with the given subtopic.\n\nDo not reference outside materials\n\nDo not assume anything beyond what’s in the script and evaluation doc\n\nIf key concepts are missing or misused, deduct marks with an explanation\n\nIf the work violates or fails to meet expectations set by the knowledge source — highlight that clearly\n\n📄 2. Follow the Rubric — Strictly\n\nUse the structure and scoring described in {{ $('HTTP Request').item.json.body.criteria }} or based on the evaluation context (e.g., “Practical Shoot,” “Blocking & Dialogue,” “Visual Theory,” etc.).\n\nEach criterion must be scored and commented on\n\nIf a part is missing or incorrect, score it low — even if other areas are strong\n\nNever inflate scores for effort alone\n\n🎯 3. Maintain Academic Integrity\n\nYour tone must reflect an academic expert giving professional feedback:\n\nBe constructive, not vague\n\nBe firm, not lenient\n\nDo not use fluff, filler praise, or generalizations\n\nAlways say why you gave each score — use academic vocabulary, but keep it understandable\n\n✅ Response Format (Markdown Style)\n📄 **Evaluation for Assignment**: [Insert Assignment Title]  \n🎓 **Subtopic**: [Insert Subtopic]  \n📘 **Evaluated Using**: [Insert Evaluation Document Name]  \n📚 **Knowledge Source**: [Insert Knowledge Source Name]\n\n📊 **Rubric-Based Scoring (Total: 100 Marks)**\n\n| Criteria                                    | Weightage | Score | Comments                                                                 |\n|--------------------------------------------|-----------|-------|--------------------------------------------------------------------------|\n| [e.g., Dialogue and Structure]             | XX        | XX    | [Was it strong, weak, or missing? Use knowledge source for judgment.]   |\n| [e.g., Visual Storytelling or Blocking]    | XX        | XX    | [Evaluate shot composition, camera movement, etc., as per expectations.]|\n| [e.g., Use of Digital Tools or VFX]        | XX        | XX    | [Assess tool usage, if any. Penalize if not applicable or poorly done.] |\n| [e.g., Creative Originality]               | XX        | XX    | [Was the idea unique? Did it stand out creatively?]                      |\n| [e.g., Presentation or Practical Execution]| XX        | XX    | [How well was the assignment completed and presented?]                  |\n| **Total**                                  | 100       | XX    |                                                                          |\n\n🧾 **Summary Feedback**:  \n[Provide a 3–5 sentence summary of how well the assignment met the goals.  \nComment on the strengths and areas that didn’t meet the expectations.  \nIf the student misunderstood the brief or didn’t apply the knowledge source properly, mention this clearly.]\n\n🎓 **Lecturer’s Guidance**:  \n- [Point out which parts of the assignment need improvement — e.g., structure, visuals, use of space]  \n- [Suggest a section of the knowledge source they should revisit to improve understanding]  \n- [Give one or two techniques or creative practices to try before the next submission]  \n- [Close with encouragement to revise or continue building their skills — but always be honest]\n\n\n❗ Final Rules Checklist\n\n❌ Do not mention:\n\nFile names or .pdf\n\nURLs\n\nSection codes like “ ”\n\n✅ You must assign scores for every criterion — no blanks\n\n✅ If a section is not submitted or incomplete, score it low and justify the score\n\n✅ Tone must be professional, academic, and constructive\n\n✅ Focus only on the actual submission — never imagine what the student “meant” to say",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        480,
+        0
+      ],
+      "id": "27c9b556-bc1d-48f7-973b-bc5df32b2c7a",
+      "name": "Evaluator",
+      "credentials": {
+        "openAiApi": {
+          "id": "8T5nzrc4aV8JnLKC",
+          "name": "Aamir"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6d51e44c-1b35-4ba3-931a-aecc10f6293e",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -288,
+        0
+      ],
+      "id": "7b93c63e-069a-4fba-a7ab-3f22f518d823",
+      "name": "Webhook",
+      "webhookId": "6d51e44c-1b35-4ba3-931a-aecc10f6293e"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Extractor": {
+      "main": [
+        [
+          {
+            "node": "analyz",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Extractor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "analyz": {
+      "main": [
+        [
+          {
+            "node": "Evaluator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "59dfc495-3dd1-44c6-a26f-e9518c20e3f2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "103c3122031a8d20e671efcdc7f9cabde359756d4a25c08cbe899ce29bb0f885"
+  },
+  "id": "RTPSbi7s2LZJonoY",
+  "tags": []
+}

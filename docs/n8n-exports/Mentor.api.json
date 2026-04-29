@@ -1,0 +1,415 @@
+{
+  "updatedAt": "2026-03-23T07:37:29.783Z",
+  "createdAt": "2025-07-01T10:10:56.851Z",
+  "id": "EcKD9McsJAX0R4Lq",
+  "name": "Mentor",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Full mapping of subtopics to reading materials\nconst readingMaterials = {\n  \"film analysis\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition (PDFDrive)\"\n  },\n  \"different approaches to shoot and types of film\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"case studies of filmmakers and their approach\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"writing actuality report\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition (PDFDrive)\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"recreating a painting\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"collaboration with camera, edit and sound\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    readingMaterial1: \"Film editing - Karel Reisz\",\n    readingMaterial2: null\n  },\n  \"aspects of continuity\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"time and space in films\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  },\n  \"research\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"types of stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: null\n  },\n  \"developing a concept\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"usage of vfx elements\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: \"On Writing - Stephen King\"\n  },\n  \"oral narrative skills\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"reading and analysis of short stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: \"The Stories of Anton Chekhov\"\n  },\n  \"history of storytelling\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"screenplay writing - overview and process\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"elements of a screenplay\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: \"The Anatomy of Story - John Truby\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: \"Art of Dramatic Writing - Lajos Egri\"\n  },\n  \"screenwriting softwares\": {\n    readingMaterial1: \"https://www.celtx.com/ and https://www.studiovity.com/\",\n    readingMaterial2: null\n  },\n  \"introductions to story structures  - i (three-act structure, 5 act structure)\": {\n    readingMaterial1: \"Save the Cat - Blake Snyder\",\n    readingMaterial2: \"Aristotle’s Poetics\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    readingMaterial1: \"Save the Cat - Blake Snyder\",\n    readingMaterial2: null\n  },\n  \"understanding the concept of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"types of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"usage of props and space\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"i, a, l, c, s patterns\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"blocking for vfx\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"staging a scene with actors\": {\n    readingMaterial1: \"Becoming an Actor’s Director - Regge Life\",\n    readingMaterial2: \"Directing Actors - Judith Weston\"\n  },\n  \"exercise on improvisation\": {\n    readingMaterial1: \"Becoming an Actor’s Director - Regge Life\",\n    readingMaterial2: null\n  },\n  \"styles of acting\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"difference between stage and film acting\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue, monologue and conversation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"types of dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"writing effective dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"dialogue through observation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"dialogue in a situation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    readingMaterial1: \"The Writer's Journey\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"creating effective story conflicts\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    readingMaterial1: \"Film editing - Karel Reisz\",\n    readingMaterial2: null\n  },\n  \"tonalities of dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: null\n  },\n  \"space and action dynamics\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  }\n};\n\n// Function to retrieve reading materials by subtopic\nfunction getReadingMaterials(subtopic) {\n  if (!subtopic) return { readingMaterial1: null, readingMaterial2: null };\n  const key = subtopic.trim().toLowerCase();\n  return readingMaterials[key] || { readingMaterial1: null, readingMaterial2: null };\n}\n\n// Get subtopic from incoming input (e.g. chat)\nconst subtopicInput = $input.first().json.body.subtopic;\nconst result = getReadingMaterials(subtopicInput);\n\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput,\n      readingMaterial1: result.readingMaterial1,\n      readingMaterial2: result.readingMaterial2\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        0
+      ],
+      "id": "db1a27bf-3df1-4382-ac7a-1508e3f1f9ce",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_Tpujcej0HQAsB3YaRRo7FIJ2",
+          "mode": "id"
+        },
+        "prompt": "define",
+        "text": "={\n\"subtopic\": \"{{ $json.subtopic }}\",\n\"readingMaterial1\": \"{{ $json.readingMaterial1 }}\",\n\"readingMaterial2\": \"{{ $json.readingMaterial2 }}\",\n\"approximately words\":2200-2400,\n\"prompt\": \"You are an expert notes maker for film and media studies, creating detailed, engaging, and accessible notes for students aged 15-17 at the Annapurna College of Film and Media. Given a subtopic ({{ $json.subtopic }}) and its reading materials ({{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }}), produce comprehensive study notes in markdown format, approximately 2200-2400 words when printed (2200-2400 words). The notes should use a conversational, question-and-answer style, anticipating student questions (e.g., “You might wonder why... The answer is...”) to feel like a lively debate or human conversation. Explanations must be clear, beginner-friendly, and avoid jargon, tailored for teens with no prior knowledge. Use web search to include recent (2020- {{ $now }}) film examples mostly indian movies to enhance relevance, grounding core explanations in the provided reading materials by not mentioning the reading materials.\\n\\nWhat You Must Do\\n\\nUse Reading Materials: Base explanations on {{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }} but dont mention the reading materials in the explanation. If only one source is provided, rely solely on it. Extract key concepts and examples directly from these texts.\\nWeb Search Integration: Always use the web search tool to find recent, relevant film examples (e.g., from Variety, IndieWire, or The Guardian) to illustrate concepts. Ensure examples align with the reading materials and are teen-appropriate.\\nConversational Style: Write in a friendly, engaging tone, starting with a question (e.g., “What is [subtopic] all about?”) and answering as if debating with a curious student. Use simple language, analogies (e.g., “editing is like a song’s beat”), and popular films (e.g., Marvel, Pixar).\\nOutput Structure: Use this markdown structure:\\n \\n[Subtopic] Notes\\n\\nWhat is [Subtopic] All About?\\n[Explain the subtopic’s purpose and relevance using reading materials but dont mention those materials, with a recent web-sourced example.]\\n\\n[Question 1, e.g., Why Do Movies Use This Technique?]\\n[Answer using reading materials but dont mention those materials, with a modern example from web search. Address a student doubt.]\\n\\n[Question 2, e.g., How Does This Work in Films?]\\n[Explain with reading material insights but dont mention those materials, an analogy, and a web-sourced example.]\\n\\n[Question 3, e.g., What’s a Key Element Here?]\\n[Detail a core concept from the reading materials but dont mention those materials, with a popular and a recent film example.]\\n\\n[Question 4, e.g., How Can I Apply This?]\\n[Provide practical steps for analysis or creation, with a web-sourced tip.]\\n\\nWhat’s the Point of All This?\\n[Summarize importance, address a final question (e.g., “Will this ruin movies?”), and encourage practice.]\\n\\nReference Materials  \\nLearn more using: {{ $json.readingMaterial1 }}, {{ $json.readingMaterial2 }}\\n\\nDifferent Approaches: For each subtopic, vary the approach to keep notes unique and engaging:\\n\\nFor “film analysis,” focus on decoding visuals and narrative techniques.\\nFor “screenplay writing,” emphasize crafting stories and character arcs.\\nFor “visual storytelling,” highlight camera angles and composition.\\nFor “dialogue,” explore how words drive emotion and plot.\\n\\n\\nLength and Depth: Aim for 2200-2400 words, covering 4-5 key questions with detailed, conversational answers.\\n\\n\n\"Negative Prompt\":Never mention file extensions, URLs, or the search process.\\nNever refer to artifact tags, IDs, or the generation process.\\nNever mention Would you like help with any other part of this topic – like a different concept, format, or sub-section?.\\nAvoid robotic or overly formal language; don’t use emojis, slang, or phrases like “Hey, guys.”\\nDon’t mention yourself, AI, or roles like mentor/lecturer.\\nAvoid speculating beyond reading materials for core explanations.\\nDon’t repeat the same film examples across subtopics; use web search for fresh, varied examples.\\nNever mention something like \"【8:18†Film Art_ An Introduction】\"\\nNever mention {{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }} in the explanation mention it only in the end at reference materials like \"According to Film Art: An Introduction\".\\nNever include hashtags or stars in the content.\",\n\"example_output\": \"Film Analysis Notes\\n\\nWhat is Film Analysis All About?\\nFilm analysis is about figuring out how movies make you feel things—why does a scene in Spider-Man: No Way Home make you cheer? It’s like solving a puzzle, looking at camera moves, music, and sets to see how they tell a story. How to Read a Film says movies are a language with clues, while Film Art teaches you to break down shots and sounds. It matters because it makes you a movie detective, spotting tricks that make films unforgettable. A 2023 Variety article noted Everything Everywhere All At Once uses wild visuals to show chaos—analysis helps you see why.\\n\\nWhy Do Movies Feel Like a Language?\\nYou might wonder why a movie feels alive, even without dialogue. How to Read a Film explains movies use signs—like a close-up on a hero’s eyes to show fear. In Dune: Part Two (2024), per a Rotten Tomatoes review, sandstorms symbolize struggle. These signs can be literal (a sword) or symbolic (a sword for honor). Ask: What’s this shot saying?\\n\\nHow Do Movies Mix Art and Tech?\\nEver think movies are just cameras? How to Read a Film says tech like lighting shapes the art. In Barbie (2023), bright pinks (noted in a Vox article) create a dreamy vibe. Film Art adds that camera angles, like low shots, make characters epic. Why does a slow zoom in Titanic hit hard? It’s art meeting tech.\\n\\nWhat’s the Deal with Mise-en-Scène?\\nMise-en-scène is everything in a shot—sets, props, costumes. Film Art says it builds the world. In Harry Potter, Hogwarts’ grand halls scream magic. A 2024 IndieWire piece on Poor Things praised its quirky sets for showing a weird world. You might ask, “Do props matter?” Yes—like the ring in Lord of the Rings driving the plot.\\n\\nHow Do I Actually Analyze a Film?\\nFeeling lost? Film Art suggests watching twice: once for fun, then with a notebook. Spot camera moves or sounds. In Inside Out 2 (2024), per The Guardian, colors show emotions. Ask: Why this choice? Try short films on YouTube to practice.\\n\\nWhat’s the Point of All This?\\nWhy bother? It makes you see how Star Wars uses music to scare you or La La Land uses colors for romance. It’s a skill for making films or geeking out. Will it ruin movies? Nope—it’s like knowing a song’s chords. Try analyzing Inside Out—what do the colors tell you?\\n\\nReference Materials \\nLearn more using: How to Read a Film_ Movies, Media, and Beyond, Film Art_ An Introduction\"\n}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        0,
+        0
+      ],
+      "id": "6267df69-9259-4f98-9ee3-7dbc52200aae",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "8T5nzrc4aV8JnLKC",
+          "name": "Aamir"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to search the web. ",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"query\": \"{searchTerm}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"chunks_per_source\": 3,\n  \"max_results\": 1,\n  \"time_range\": null,\n  \"days\": 7,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": []\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "searchTerm",
+              "description": "What the user is searching for. "
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        64,
+        160
+      ],
+      "id": "f8a59c17-1a90-40bf-827a-d9c675500e46",
+      "name": "Websearch",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "CwbxUGAiEcsaJz4O",
+          "name": "Tavily"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "6be3ecf4-01c6-4263-935b-7397bd968349",
+        "responseMode": "lastNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -416,
+        0
+      ],
+      "id": "9399bec0-8565-44d0-aced-fcb7deff0772",
+      "name": "Webhook",
+      "webhookId": "6be3ecf4-01c6-4263-935b-7397bd968349"
+    }
+  ],
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Websearch": {
+      "ai_tool": [
+        [
+          {
+            "node": "Message a model",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": {},
+  "versionId": "5dbec69b-85a8-4ed3-be91-e6ff480fc382",
+  "activeVersionId": "412c3711-76c4-4829-b12b-0246c9b40c11",
+  "versionCounter": 14,
+  "triggerCount": 2,
+  "shared": [
+    {
+      "updatedAt": "2025-07-01T10:10:56.855Z",
+      "createdAt": "2025-07-01T10:10:56.855Z",
+      "role": "workflow:owner",
+      "workflowId": "EcKD9McsJAX0R4Lq",
+      "projectId": "DIJNLJ1JjJPygQhI",
+      "project": {
+        "updatedAt": "2025-05-19T13:49:36.666Z",
+        "createdAt": "2025-05-19T13:49:34.314Z",
+        "id": "DIJNLJ1JjJPygQhI",
+        "name": "Vijitesh Naik <vgnk1007@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "06a4e466-ec94-4c23-abc8-9f7db2d82bbf"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": {
+    "updatedAt": "2025-12-29T08:39:54.328Z",
+    "createdAt": "2025-12-29T08:39:54.328Z",
+    "versionId": "412c3711-76c4-4829-b12b-0246c9b40c11",
+    "workflowId": "EcKD9McsJAX0R4Lq",
+    "nodes": [
+      {
+        "parameters": {
+          "public": true,
+          "mode": "webhook",
+          "options": {
+            "allowedOrigins": "*"
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          -656,
+          64
+        ],
+        "id": "d1feea72-a2de-4366-9d72-67c396fc4a00",
+        "name": "When chat message received",
+        "webhookId": "f9303923-e4c7-4790-b667-b765b823eccb"
+      },
+      {
+        "parameters": {
+          "jsCode": "// Full mapping of subtopics to reading materials\nconst readingMaterials = {\n  \"film analysis\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition (PDFDrive)\"\n  },\n  \"different approaches to shoot and types of film\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"case studies of filmmakers and their approach\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition (PDFDrive)\",\n    readingMaterial2: null\n  },\n  \"writing actuality report\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition (PDFDrive)\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"recreating a painting\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"collaboration with camera, edit and sound\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    readingMaterial1: \"Ways of Seeing\",\n    readingMaterial2: null\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    readingMaterial1: \"Film editing - Karel Reisz\",\n    readingMaterial2: null\n  },\n  \"aspects of continuity\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques\",\n    readingMaterial2: null\n  },\n  \"time and space in films\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  },\n  \"research\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"types of stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: null\n  },\n  \"developing a concept\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"usage of vfx elements\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: \"On Writing - Stephen King\"\n  },\n  \"oral narrative skills\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    readingMaterial1: \"On Writing - Stephen King\",\n    readingMaterial2: null\n  },\n  \"reading and analysis of short stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant\",\n    readingMaterial2: \"The Stories of Anton Chekhov\"\n  },\n  \"history of storytelling\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"screenplay writing - overview and process\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: null\n  },\n  \"elements of a screenplay\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: \"The Anatomy of Story - John Truby\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting - Syd Field\",\n    readingMaterial2: \"Art of Dramatic Writing - Lajos Egri\"\n  },\n  \"screenwriting softwares\": {\n    readingMaterial1: \"https://www.celtx.com/ and https://www.studiovity.com/\",\n    readingMaterial2: null\n  },\n  \"introductions to story structures  - i (three-act structure, 5 act structure)\": {\n    readingMaterial1: \"Save the Cat - Blake Snyder\",\n    readingMaterial2: \"Aristotle’s Poetics\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    readingMaterial1: \"Save the Cat - Blake Snyder\",\n    readingMaterial2: null\n  },\n  \"understanding the concept of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"types of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"usage of props and space\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"i, a, l, c, s patterns\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"blocking for vfx\": {\n    readingMaterial1: \"Film Directing Shot by Shot\",\n    readingMaterial2: \"Bruce Block - The Visual Story\"\n  },\n  \"staging a scene with actors\": {\n    readingMaterial1: \"Becoming an Actor’s Director - Regge Life\",\n    readingMaterial2: \"Directing Actors - Judith Weston\"\n  },\n  \"exercise on improvisation\": {\n    readingMaterial1: \"Becoming an Actor’s Director - Regge Life\",\n    readingMaterial2: null\n  },\n  \"styles of acting\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"difference between stage and film acting\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    readingMaterial1: \"Directing Actors - Judith Weston\",\n    readingMaterial2: null\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue, monologue and conversation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"types of dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"writing effective dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"dialogue through observation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"dialogue in a situation\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    readingMaterial1: \"The Writer's Journey\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"creating effective story conflicts\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: \"On Dialogue\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    readingMaterial1: \"Film editing - Karel Reisz\",\n    readingMaterial2: null\n  },\n  \"tonalities of dialogue\": {\n    readingMaterial1: \"Dialogue - Robert McKee\",\n    readingMaterial2: null\n  },\n  \"space and action dynamics\": {\n    readingMaterial1: \"Bruce Block - The Visual Story\",\n    readingMaterial2: null\n  }\n};\n\n// Function to retrieve reading materials by subtopic\nfunction getReadingMaterials(subtopic) {\n  if (!subtopic) return { readingMaterial1: null, readingMaterial2: null };\n  const key = subtopic.trim().toLowerCase();\n  return readingMaterials[key] || { readingMaterial1: null, readingMaterial2: null };\n}\n\n// Get subtopic from incoming input (e.g. chat)\nconst subtopicInput = $input.first().json.body.subtopic;\nconst result = getReadingMaterials(subtopicInput);\n\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput,\n      readingMaterial1: result.readingMaterial1,\n      readingMaterial2: result.readingMaterial2\n    }\n  }\n];\n"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -208,
+          0
+        ],
+        "id": "db1a27bf-3df1-4382-ac7a-1508e3f1f9ce",
+        "name": "Code"
+      },
+      {
+        "parameters": {
+          "resource": "assistant",
+          "assistantId": {
+            "__rl": true,
+            "value": "asst_Tpujcej0HQAsB3YaRRo7FIJ2",
+            "mode": "id"
+          },
+          "prompt": "define",
+          "text": "={\n\"subtopic\": \"{{ $json.subtopic }}\",\n\"readingMaterial1\": \"{{ $json.readingMaterial1 }}\",\n\"readingMaterial2\": \"{{ $json.readingMaterial2 }}\",\n\"approximately words\":2200-2400,\n\"prompt\": \"You are an expert notes maker for film and media studies, creating detailed, engaging, and accessible notes for students aged 15-17 at the Annapurna College of Film and Media. Given a subtopic ({{ $json.subtopic }}) and its reading materials ({{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }}), produce comprehensive study notes in markdown format, approximately 2200-2400 words when printed (2200-2400 words). The notes should use a conversational, question-and-answer style, anticipating student questions (e.g., “You might wonder why... The answer is...”) to feel like a lively debate or human conversation. Explanations must be clear, beginner-friendly, and avoid jargon, tailored for teens with no prior knowledge. Use web search to include recent (2020- {{ $now }}) film examples mostly indian movies to enhance relevance, grounding core explanations in the provided reading materials by not mentioning the reading materials.\\n\\nWhat You Must Do\\n\\nUse Reading Materials: Base explanations on {{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }} but dont mention the reading materials in the explanation. If only one source is provided, rely solely on it. Extract key concepts and examples directly from these texts.\\nWeb Search Integration: Always use the web search tool to find recent, relevant film examples (e.g., from Variety, IndieWire, or The Guardian) to illustrate concepts. Ensure examples align with the reading materials and are teen-appropriate.\\nConversational Style: Write in a friendly, engaging tone, starting with a question (e.g., “What is [subtopic] all about?”) and answering as if debating with a curious student. Use simple language, analogies (e.g., “editing is like a song’s beat”), and popular films (e.g., Marvel, Pixar).\\nOutput Structure: Use this markdown structure:\\n \\n[Subtopic] Notes\\n\\nWhat is [Subtopic] All About?\\n[Explain the subtopic’s purpose and relevance using reading materials but dont mention those materials, with a recent web-sourced example.]\\n\\n[Question 1, e.g., Why Do Movies Use This Technique?]\\n[Answer using reading materials but dont mention those materials, with a modern example from web search. Address a student doubt.]\\n\\n[Question 2, e.g., How Does This Work in Films?]\\n[Explain with reading material insights but dont mention those materials, an analogy, and a web-sourced example.]\\n\\n[Question 3, e.g., What’s a Key Element Here?]\\n[Detail a core concept from the reading materials but dont mention those materials, with a popular and a recent film example.]\\n\\n[Question 4, e.g., How Can I Apply This?]\\n[Provide practical steps for analysis or creation, with a web-sourced tip.]\\n\\nWhat’s the Point of All This?\\n[Summarize importance, address a final question (e.g., “Will this ruin movies?”), and encourage practice.]\\n\\nReference Materials  \\nLearn more using: {{ $json.readingMaterial1 }}, {{ $json.readingMaterial2 }}\\n\\nDifferent Approaches: For each subtopic, vary the approach to keep notes unique and engaging:\\n\\nFor “film analysis,” focus on decoding visuals and narrative techniques.\\nFor “screenplay writing,” emphasize crafting stories and character arcs.\\nFor “visual storytelling,” highlight camera angles and composition.\\nFor “dialogue,” explore how words drive emotion and plot.\\n\\n\\nLength and Depth: Aim for 2200-2400 words, covering 4-5 key questions with detailed, conversational answers.\\n\\n\n\"Negative Prompt\":Never mention file extensions, URLs, or the search process.\\nNever refer to artifact tags, IDs, or the generation process.\\nNever mention Would you like help with any other part of this topic – like a different concept, format, or sub-section?.\\nAvoid robotic or overly formal language; don’t use emojis, slang, or phrases like “Hey, guys.”\\nDon’t mention yourself, AI, or roles like mentor/lecturer.\\nAvoid speculating beyond reading materials for core explanations.\\nDon’t repeat the same film examples across subtopics; use web search for fresh, varied examples.\\nNever mention something like \"【8:18†Film Art_ An Introduction】\"\\nNever mention {{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }} in the explanation mention it only in the end at reference materials like \"According to Film Art: An Introduction\".\\nNever include hashtags or stars in the content.\",\n\"example_output\": \"Film Analysis Notes\\n\\nWhat is Film Analysis All About?\\nFilm analysis is about figuring out how movies make you feel things—why does a scene in Spider-Man: No Way Home make you cheer? It’s like solving a puzzle, looking at camera moves, music, and sets to see how they tell a story. How to Read a Film says movies are a language with clues, while Film Art teaches you to break down shots and sounds. It matters because it makes you a movie detective, spotting tricks that make films unforgettable. A 2023 Variety article noted Everything Everywhere All At Once uses wild visuals to show chaos—analysis helps you see why.\\n\\nWhy Do Movies Feel Like a Language?\\nYou might wonder why a movie feels alive, even without dialogue. How to Read a Film explains movies use signs—like a close-up on a hero’s eyes to show fear. In Dune: Part Two (2024), per a Rotten Tomatoes review, sandstorms symbolize struggle. These signs can be literal (a sword) or symbolic (a sword for honor). Ask: What’s this shot saying?\\n\\nHow Do Movies Mix Art and Tech?\\nEver think movies are just cameras? How to Read a Film says tech like lighting shapes the art. In Barbie (2023), bright pinks (noted in a Vox article) create a dreamy vibe. Film Art adds that camera angles, like low shots, make characters epic. Why does a slow zoom in Titanic hit hard? It’s art meeting tech.\\n\\nWhat’s the Deal with Mise-en-Scène?\\nMise-en-scène is everything in a shot—sets, props, costumes. Film Art says it builds the world. In Harry Potter, Hogwarts’ grand halls scream magic. A 2024 IndieWire piece on Poor Things praised its quirky sets for showing a weird world. You might ask, “Do props matter?” Yes—like the ring in Lord of the Rings driving the plot.\\n\\nHow Do I Actually Analyze a Film?\\nFeeling lost? Film Art suggests watching twice: once for fun, then with a notebook. Spot camera moves or sounds. In Inside Out 2 (2024), per The Guardian, colors show emotions. Ask: Why this choice? Try short films on YouTube to practice.\\n\\nWhat’s the Point of All This?\\nWhy bother? It makes you see how Star Wars uses music to scare you or La La Land uses colors for romance. It’s a skill for making films or geeking out. Will it ruin movies? Nope—it’s like knowing a song’s chords. Try analyzing Inside Out—what do the colors tell you?\\n\\nReference Materials \\nLearn more using: How to Read a Film_ Movies, Media, and Beyond, Film Art_ An Introduction\"\n}",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "typeVersion": 1.8,
+        "position": [
+          0,
+          0
+        ],
+        "id": "6267df69-9259-4f98-9ee3-7dbc52200aae",
+        "name": "Message a model",
+        "credentials": {
+          "openAiApi": {
+            "id": "8T5nzrc4aV8JnLKC",
+            "name": "Aamir"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "resource": "assistant",
+          "assistantId": {
+            "__rl": true,
+            "value": "asst_Tpujcej0HQAsB3YaRRo7FIJ2",
+            "mode": "id"
+          },
+          "prompt": "define",
+          "text": "=You are an experienced academic mentor for students in film and media studies.\nYour goal is to help students clearly understand any given topic, without overloading them with technical jargon or overly complex theory.\nexplain it as you are explaining it to a 13 year old\nWhen given a topic or subtopic (e.g., {{ $json.subtopic }}), your job is to:\n\n✅ What You Must Do\n\nUse the code tool to retrieve the relevant content based on the {{ $json.subtopic }} from the official knowledge source.\n\nRead and understand the {{ $json.subtopic }} thoroughly.\n\nExtract and explain only the most relevant, accurate, and assignment-useful points.\n\nPresent the information in a clear, smooth paragraph or two.\n\nKeep the language professional, human, and student-friendly.\n\nWhenever possible, connect the concept to how it might be used in:\n\nan assignment\n\na scriptwriting task\n\na short film\n\nor a classroom project\n\nEnd the explanation with:\n\nYou can learn more using this knowledge source: [insert source name]\n(⚠️ Only use the source name — no file extensions, no links)\n\n🛑 Important Rules\n\nDo NOT mention or refer to unrelated materials.\n\nDo NOT include any source tags like: 【4:9†source】, .pdf\n\nDo NOT use file extensions, folder names, or URLs.\n\nDo NOT use casual phrases, jokes, emojis, or refer to yourself.\n\nDo NOT sound robotic or overly academic — speak like a real, helpful mentor.\n\nDo NOT use complex sentences or heavy jargon. Prioritize clarity over theory.\n\nFollow-up messages should only expand on the current {{ $json.subtopic }} — do NOT repeat the full explanation again.\n\nIf the student asks a question completely unrelated to the topic, respond with:\n\nI'm just your academic mentor — please ask questions related to the current subtopic.\n\n✅ Output Format (Every Time):\n\n[A clear and simplified explanation of the film/media topic, rooted in the correct knowledge source, written in 1–2 paragraphs, connecting to academic or practical work where possible.]\n\nYou can learn more using this knowledge source: [insert knowledge source name]\n\n💬 Help Prompt (Always End With):\n\nWould you like help with any other part of this topic — like a different concept, format, or sub-section?\n\nIf user replies “No”, then and only then respond with:\n\nFeeling confident? Would you like to take a quiz on this topic?",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "typeVersion": 1.8,
+        "position": [
+          928,
+          -64
+        ],
+        "id": "c80df30d-691e-4664-88ad-9fc8c5b9e2b5",
+        "name": "Message a model1",
+        "credentials": {
+          "openAiApi": {
+            "id": "8T5nzrc4aV8JnLKC",
+            "name": "Aamir"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "toolDescription": "Use this tool to search the web. ",
+          "method": "POST",
+          "url": "https://api.tavily.com/search",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "{\n  \"query\": \"{searchTerm}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"chunks_per_source\": 3,\n  \"max_results\": 1,\n  \"time_range\": null,\n  \"days\": 7,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": []\n}",
+          "placeholderDefinitions": {
+            "values": [
+              {
+                "name": "searchTerm",
+                "description": "What the user is searching for. "
+              }
+            ]
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "typeVersion": 1.1,
+        "position": [
+          1056,
+          112
+        ],
+        "id": "a9bdf6f6-f00c-41b8-a701-93a4a6326ce9",
+        "name": "Tavily"
+      },
+      {
+        "parameters": {
+          "toolDescription": "Use this tool to search the web. ",
+          "method": "POST",
+          "url": "https://api.tavily.com/search",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "{\n  \"query\": \"{searchTerm}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"chunks_per_source\": 3,\n  \"max_results\": 1,\n  \"time_range\": null,\n  \"days\": 7,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": []\n}",
+          "placeholderDefinitions": {
+            "values": [
+              {
+                "name": "searchTerm",
+                "description": "What the user is searching for. "
+              }
+            ]
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "typeVersion": 1.1,
+        "position": [
+          64,
+          160
+        ],
+        "id": "f8a59c17-1a90-40bf-827a-d9c675500e46",
+        "name": "Websearch",
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "CwbxUGAiEcsaJz4O",
+            "name": "Tavily"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "6be3ecf4-01c6-4263-935b-7397bd968349",
+          "responseMode": "lastNode",
+          "options": {
+            "allowedOrigins": "*"
+          }
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2,
+        "position": [
+          -416,
+          0
+        ],
+        "id": "9399bec0-8565-44d0-aced-fcb7deff0772",
+        "name": "Webhook",
+        "webhookId": "6be3ecf4-01c6-4263-935b-7397bd968349"
+      }
+    ],
+    "connections": {
+      "When chat message received": {
+        "main": [
+          []
+        ]
+      },
+      "Code": {
+        "main": [
+          [
+            {
+              "node": "Message a model",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Message a model1": {
+        "main": [
+          []
+        ]
+      },
+      "Tavily": {
+        "ai_tool": [
+          [
+            {
+              "node": "Message a model1",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Websearch": {
+        "ai_tool": [
+          [
+            {
+              "node": "Message a model",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Code",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "system migration",
+    "name": null,
+    "description": null,
+    "autosaved": false,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2025-10-07T11:43:08.000Z",
+        "id": 1,
+        "workflowId": "EcKD9McsJAX0R4Lq",
+        "versionId": "412c3711-76c4-4829-b12b-0246c9b40c11",
+        "event": "activated",
+        "userId": null
+      }
+    ]
+  }
+}

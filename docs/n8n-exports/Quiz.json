@@ -1,0 +1,125 @@
+{
+  "name": "Quiz",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Full mapping of subtopics to reading materials\nconst readingMaterials = {\n  \"film analysis\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond.pdf\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf\"\n  },\n  \"different approaches to shoot and types of film\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"case studies of filmmakers and their approach\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"case studies of filmmakers in historical perspective\": {\n    readingMaterial1: \"Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"writing actuality report\": {\n    readingMaterial1: \"Ways of Seeing .pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)\": {\n    readingMaterial1: \"How to Read a Film_ Movies, Media, and Beyond.pdf\",\n    readingMaterial2: \"Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf\"\n  },\n  \"introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"recreating a painting\": {\n    readingMaterial1: \"Ways of Seeing .pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"collaboration with camera, edit and sound\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"turning actualities into stories (writing on observation)\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"trip to closed public space (e.g. library, museum)\": {\n    readingMaterial1: \"Ways of Seeing .pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"trip to an open public space (e.g. park, market place, bus stop)\": {\n    readingMaterial1: \"Ways of Seeing .pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"decoupage (cutting scripts and planning visual for cinematic connection) and continuity\": {\n    readingMaterial1: \"Film editing karel reiz.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"aspects of continuity\": {\n    readingMaterial1: \"The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"time and space in films\": {\n    readingMaterial1: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"scene analysis of classical hollywood films and contemporary films\": {\n    readingMaterial1: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"research\": {\n    readingMaterial1: \"On Writing_ A Memoir of the Craft - Stephen King.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"types of stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"developing a concept\": {\n    readingMaterial1: \"On Writing_ A Memoir of the Craft - Stephen King.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"usage of vfx elements\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant.pdf\",\n    readingMaterial2: \"On Writing_ A Memoir of the Craft - Stephen King.pdf\"\n  },\n  \"oral narrative skills\": {\n    readingMaterial1: \"On Writing_ A Memoir of the Craft - Stephen King.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"creative writing (personal memoir, descriptive writing)\": {\n    readingMaterial1: \"On Writing_ A Memoir of the Craft - Stephen King.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"reading and analysis of short stories\": {\n    readingMaterial1: \"Short stories by Guy de Maupassant.pdf\",\n    readingMaterial2: \"The Stories of Anton Chekhov (Anton Chekhov).pdf\"\n  },\n  \"history of storytelling\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"screenplay writing - overview and process\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"elements of a screenplay\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf\",\n    readingMaterial2: \"the-anatomy-of-story-22-steps-to-becoming-a-master-storyteller_compress.pdf\"\n  },\n  \"premise, plot, treatment, characters, conflict\": {\n    readingMaterial1: \"Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf\",\n    readingMaterial2: \"Art of Dramatic Writing - Lajos Egri.pdf\"\n  },\n  \"screenwriting softwares\": {\n    readingMaterial1: \"https://www.celtx.com/ and https://www.studiovity.com/\",\n    readingMaterial2: \"-\"\n  },\n  \"introductions to story structures - i (three-act structure, 5 act structure)\": {\n    readingMaterial1: \"toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.pdf\",\n    readingMaterial2: \"Aristotle_Poetics_Lucas_Kassel_1968_1980.pdf\"\n  },\n  \"creating simple screenplays using 3 act structure\": {\n    readingMaterial1: \"toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"understanding the concept of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by shot .pdf\",\n    readingMaterial2: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\"\n  },\n  \"types of staging and blocking\": {\n    readingMaterial1: \"Film Directing Shot by shot .pdf\",\n    readingMaterial2: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\"\n  },\n  \"usage of props and space\": {\n    readingMaterial1: \"Film Directing Shot by shot .pdf\",\n    readingMaterial2: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\"\n  },\n  \"i, a, l, c, s patterns\": {\n    readingMaterial1: \"Film Directing Shot by shot .pdf\",\n    readingMaterial2: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\"\n  },\n  \"blocking for vfx\": {\n    readingMaterial1: \"Film Directing Shot by shot .pdf\",\n    readingMaterial2: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\"\n  },\n  \"staging a scene with actors\": {\n    readingMaterial1: \"ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.pdf\",\n    readingMaterial2: \"Directing Actors_ Creating Memorable Performances for Film & Television.pdf\"\n  },\n  \"exercise on improvisation\": {\n    readingMaterial1: \"ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"styles of acting\": {\n    readingMaterial1: \"Directing Actors_ Creating Memorable Performances for Film & Television.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"difference between stage and film acting\": {\n    readingMaterial1: \"Directing Actors_ Creating Memorable Performances for Film & Television.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"working with virtual/digital actors : possibilities & limitations\": {\n    readingMaterial1: \"Directing Actors_ Creating Memorable Performances for Film & Television.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"dialogue – acting - composition-staging and blocking along with use of visualization tools like\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"traditional/digital storyboards & ai tools for mood boards\": {\n    readingMaterial1: \"IDS SEM I-SPW\",\n    readingMaterial2: \"IDS SEM II - parameters_dialogue\"\n  },\n  \"dialogue, monologue and conversation\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"types of dialogue\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"writing effective dialogue\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"dialogue through observation\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"dialogue in a situation\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"story structures ii (hero’s journey, dan harmon story circle)\": {\n    readingMaterial1: \"The Writer's Journey.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"creating effective story conflicts\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"On Dialogue.pdf\"\n  },\n  \"usage of edit, sound and bgm from director’s point of view\": {\n    readingMaterial1: \"Film editing karel reiz.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"tonalities of dialogue\": {\n    readingMaterial1: \"Dialogue_-_Robert_McKee.pdf\",\n    readingMaterial2: \"-\"\n  },\n  \"space and action dynamics\": {\n    readingMaterial1: \"Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf\",\n    readingMaterial2: \"-\"\n  }\n};\n\n// Function to get reading materials by subtopic name (case-insensitive)\nfunction getReadingMaterials(subtopic) {\n  // Check if subtopic is undefined, null, or empty\n  if (!subtopic || typeof subtopic !== 'string') {\n    return { readingMaterial1: null, readingMaterial2: null };\n  }\n\n  // Normalize subtopic to lowercase and trim whitespace\n  const key = subtopic.trim().toLowerCase();\n\n  // Retrieve materials or return default if subtopic not found\n  const materials = readingMaterials[key] || {\n    readingMaterial1: null,\n    readingMaterial2: null\n  };\n\n  return materials;\n}\n\n// Get subtopic from input (from n8n input JSON)\nconst subtopicInput = $input.first().json.body.subtopic;\n\n// Get reading materials for the subtopic\nconst result = getReadingMaterials(subtopicInput);\n\n// Return the result in the expected format\nreturn [\n  {\n    json: {\n      subtopic: subtopicInput || null, // Handle case where subtopicInput is undefined\n      readingMaterial1: result.readingMaterial1,\n      readingMaterial2: result.readingMaterial2\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        64
+      ],
+      "id": "50d2c432-c82e-4126-9528-894347462aae",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_JAZ3hgBRQzs8i04PMb1rmiJW",
+          "mode": "id"
+        },
+        "prompt": "define",
+        "text": "=I am providing you with a subtopic {{ $json.subtopic }}and reading materials {{ $json.readingMaterial1 }}{{ $json.readingMaterial2 }}\n. Your task is to create exactly 5 MCQ questions based solely on the content from the reading materials retrieved using the given input.{{ $json.readingMaterial1 }}{{ $json.readingMaterial2 }}\n\nEach MCQ must be represented as a JSON object inside an array structure under the key \"all_questions\". Each object should contain:\n\n- \"question\" (the MCQ question as a string),\n- \"options\" (an array of four possible answers),\n- \"correct_option_id\" (the index of the correct answer, starting from 0).\n- \"Correct_answer_explanation\"(2-3 explanation of the answer from the knowledge )\n\nThe correct_option_id and Correct_answer_explanation must be factually accurate based on content from the reading material, but it should not be displayed when rendering the questions. Ensure it is still included in the JSON for evaluation purposes.\n\nMake sure you follow this structure strictly — incorrect or inconsistent structure will not be processed further.\n\nAlso, make sure:\n- You retrieve and refer only to the academic content from {{ $json.readingMaterial1 }} and {{ $json.readingMaterial2 }} as derived using the subtopic from {{ $json.subtopic }}.\n- The quiz questions are accurate, concise, and based purely on the subtopic and reading content.\n- The final output should only include the array structure with five MCQ questions.\n- Never include emojis, jokes, casual tone, or AI references.\n- Every answers should have different options as answers.\n- Format your output as clean JSON — strictly following the example.\n- The correct answer of the quiz should be random position and different position for each questions generated with only one being the same.\n\nExample:\n\n{\n  \"all_questions\": [\n    {\n      \"question\": \"What is the primary purpose of color grading in film post-production?\",\n      \"options\": [\"To correct audio levels\", \"To enhance the visual tone and mood of the film\", \"To edit the script for continuity\", \"To adjust the film's running time\"],\n      \"correct_option_id\": 1\n    },\n    {\n      \"question\": \"Which of the following best defines diegetic sound?\",\n      \"options\": [\"Sound that only the audience can hear\", \"Sound created during editing\", \"Sound that originates from within the film’s world\", \"Sound added as background music\"],\n      \"correct_option_id\": 2\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        688,
+        64
+      ],
+      "id": "b56ef437-5c93-4a2c-82dc-f5bd2831e61d",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "8T5nzrc4aV8JnLKC",
+          "name": "Aamir"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        64
+      ],
+      "id": "aea867a8-a6e9-4f0f-8624-b996e974f87a",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "47ded585-f75c-451f-8fc0-64d4908ec53e",
+        "responseMode": "lastNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        224,
+        64
+      ],
+      "id": "082cfed0-1e6e-43fd-88f3-1aa5ae0a6cc4",
+      "name": "Webhook",
+      "webhookId": "47ded585-f75c-451f-8fc0-64d4908ec53e"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "61c92c36-c738-483e-8989-a8803c65a34b",
+  "meta": {
+    "instanceId": "103c3122031a8d20e671efcdc7f9cabde359756d4a25c08cbe899ce29bb0f885"
+  },
+  "id": "hxfX4HQhKDk2Q0JW",
+  "tags": []
+}
