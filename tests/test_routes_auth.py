@@ -28,3 +28,8 @@ def test_assignments_revise_requires_auth():
 def test_quizzes_generate_requires_auth():
     r = client.post("/api/quizzes/generate", json={"subtopic": "film analysis"})
     assert r.status_code == 401
+
+
+def test_mentor_chat_requires_auth():
+    r = client.post("/api/mentor/chat", json={"chatInput": "what is mise-en-scene?"})
+    assert r.status_code == 401

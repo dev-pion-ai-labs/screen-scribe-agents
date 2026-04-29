@@ -16,7 +16,7 @@ The 8 endpoints we are migrating off n8n:
 | 4 | `POST /api/assignments/revise` | ✅ scaffolded |
 | 5 | `POST /api/notes/generate` | ✅ scaffolded |
 | 6 | `POST /api/quizzes/generate` | ✅ scaffolded |
-| 7 | `POST /api/mentor/chat` | TODO |
+| 7 | `POST /api/mentor/chat` | ✅ scaffolded |
 | 8 | `POST /api/mentor/quiz` | ⚠️ deferred — original n8n workflow not found, see `migratetocrew.md` |
 
 ## Local dev
