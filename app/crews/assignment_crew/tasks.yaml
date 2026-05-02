@@ -12,6 +12,42 @@ generate_assignment:
     {evaluation_document_content}
     ===== EVALUATION DOCUMENT END =====
 
+    LANGUAGE RULES (these override anything you've absorbed from the evaluation
+    document's academic tone):
+    - Target Grade 8 reading level. A 15-year-old student should read each
+      sentence once and know what to do.
+    - Average sentence length under 18 words. Break long sentences into two.
+    - Prefer everyday words. When you must use a film term (e.g. "mise-en-scène",
+      "blocking", "diegetic"), define it in the same sentence in plain English
+      ("blocking — basically, where actors stand and move in the scene").
+    - Never copy the evaluation document's sentence structure or vocabulary.
+      Rewrite borrowed framing in your own simpler words.
+    - Banned phrases: "deconstruct", "deconstruction", "passive viewing", "active
+      deconstruction", "moreover", "furthermore", "thus", "hence", "in essence",
+      "fundamentally", "it is important to note", "constitutes", "delineates",
+      "encapsulates", "paradigm", "narrative architecture", "formal analysis"
+      (use "close analysis" instead), "internal state" (use "feelings" or
+      "emotions"), "directorial vision" (use "the director's choices").
+    - No semicolons. No nested clauses three levels deep. Active voice over
+      passive: "Record one scene" — not "one scene must be recorded".
+    - Rubric criterion labels must be plain English too. Bad: "Analytical Depth
+      of Cinematic Language". Good: "How well you read the film's choices".
+      Each label must still be specific and outcome-based, not generic.
+
+    FORMATTING RULES (apply throughout — heavy formatting is the goal, not
+    paragraphs):
+    - Keep paragraphs to 1-2 short sentences max.
+    - Use **bold** for the first appearance of any film term or key concept.
+    - The Task section MUST be a numbered list of concrete steps, not a single
+      paragraph. Each numbered step starts with a bold action label
+      (e.g. "**1. Pick a scene:**") followed by 1-2 short sentences.
+    - Include a `**You'll make:**` bullet list of 2-3 deliverables right after
+      the Objective.
+    - Include a `> **Watch out:**` blockquote callout naming one common mistake
+      students make on this kind of task.
+    - Include a `**Tips:**` bullet list of 2-3 practical hints before the
+      Submission Format.
+
     Hard rules:
     - Base the assignment on the official knowledge source for the subtopic.
       Do not invent theories, frameworks, or external references.
@@ -59,29 +95,52 @@ generate_assignment:
 
     📄 **Title**: [Insert Assignment Title Here]
 
-    📝 **Assignment**:
+    > **In one line:** [a single plain-English sentence describing what the
+    student will create and why it matters]
+
+    📝 **Assignment**
 
     **Objective**:
-    [What is the goal of this assignment? Briefly describe what it helps the
-    student learn or apply.]
+    [1-2 short sentences on what this assignment helps the student learn or
+    practise. Plain English.]
+
+    **You'll make:**
+    - [Deliverable 1]
+    - [Deliverable 2]
+    - [Deliverable 3 if applicable]
 
     **Task**:
-    [Activity-based instructions. Include examples, prompts, or staging
-    directions where appropriate.]
+
+    **1. [Action label, e.g. Pick a scene]:** [1-2 short sentences with the
+    instruction.]
+
+    **2. [Action label]:** [1-2 short sentences.]
+
+    **3. [Action label]:** [1-2 short sentences.]
+
+    **4. [Action label]:** [1-2 short sentences.]
+
+    > **Watch out:** [one common mistake students make on this task, in one
+    short sentence]
+
+    **Tips:**
+    - [Practical hint 1]
+    - [Practical hint 2]
+    - [Practical hint 3 if useful]
 
     **Submission Format**:
     [What the student must submit — recordings, sketches, diagrams, short
-    write-ups, etc.]
+    write-ups, etc. Keep it to 1-2 short sentences.]
 
     📊 **Rubric for Evaluation (Total: 100 Marks)**
 
     | Criteria | Weightage |
     |---|---|
-    | [Criterion 1] | XX |
-    | [Criterion 2] | XX |
-    | [Criterion 3] | XX |
-    | [Criterion 4] | XX |
-    | [Criterion 5] | XX |
+    | [Plain-English criterion 1] | XX |
+    | [Plain-English criterion 2] | XX |
+    | [Plain-English criterion 3] | XX |
+    | [Plain-English criterion 4] | XX |
+    | [Plain-English criterion 5] | XX |
 
     You can learn more using this knowledge source: **[Insert Source Name]**
   expected_output: >
@@ -123,6 +182,22 @@ revise_assignment:
     - "Clarify learning outcome" → refine objectives to specify what students
       will learn or apply.
 
+    LANGUAGE + FORMATTING RULES (same as generation — apply when rewriting any
+    section, even if the original used heavier prose):
+    - Grade 8 reading level, average sentence length under 18 words.
+    - No banned academic phrases ("deconstruct", "passive viewing", "narrative
+      architecture", "formal analysis", "directorial vision", "moreover",
+      "furthermore", "thus", "hence", "constitutes", "encapsulates",
+      "paradigm", "internal state", etc.). Use plain English equivalents.
+    - Define every film term in the same sentence in plain English.
+    - Task section must be a numbered list with bold action labels, not a
+      paragraph. Each step is 1-2 short sentences.
+    - Preserve the **You'll make:**, `> **Watch out:**`, and **Tips:** blocks
+      if present. If the original assignment is missing them, add them when
+      you touch the Task section.
+    - Rubric criterion labels stay plain English ("How well you read the film's
+      choices"), not academic ("Analytical Depth of Cinematic Language").
+
     Hard rules (same as generation):
     - Stay grounded in the assigned knowledge source for the subtopic.
     - Never reference unrelated material or invent content.
@@ -149,27 +224,48 @@ revise_assignment:
 
     📄 **Title**: [Updated Title if revised]
 
+    > **In one line:** [single plain-English sentence — keep or refresh]
+
     📝 **Assignment**
 
     **Objective**:
-    [Updated or refined assignment objective — only change if needed]
+    [Updated or refined assignment objective — only change if needed. 1-2 short
+    sentences in plain English.]
+
+    **You'll make:**
+    - [Deliverable 1]
+    - [Deliverable 2]
+    - [Deliverable 3 if applicable]
 
     **Task**:
-    [Rewritten task instructions — include all changes made from the original,
-    structured clearly]
+
+    **1. [Action label]:** [1-2 short sentences.]
+
+    **2. [Action label]:** [1-2 short sentences.]
+
+    **3. [Action label]:** [1-2 short sentences.]
+
+    **4. [Action label]:** [1-2 short sentences.]
+
+    > **Watch out:** [one common mistake in one short sentence]
+
+    **Tips:**
+    - [Practical hint 1]
+    - [Practical hint 2]
+    - [Practical hint 3 if useful]
 
     **Submission Format**:
-    [Update only if changes were requested or implied]
+    [Update only if changes were requested or implied. 1-2 short sentences.]
 
     📊 **Rubric for Evaluation (Total: 100 Marks)**
 
     | Criteria | Weightage |
     |---|---|
-    | [Criterion 1] | XX |
-    | [Criterion 2] | XX |
-    | [Criterion 3] | XX |
-    | [Criterion 4] | XX |
-    | [Criterion 5] | XX |
+    | [Plain-English criterion 1] | XX |
+    | [Plain-English criterion 2] | XX |
+    | [Plain-English criterion 3] | XX |
+    | [Plain-English criterion 4] | XX |
+    | [Plain-English criterion 5] | XX |
 
     ---
 
