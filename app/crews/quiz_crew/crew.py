@@ -3,6 +3,7 @@ from __future__ import annotations
 import asyncio
 import json
 import re
+import secrets
 from functools import lru_cache
 from pathlib import Path
 
@@ -112,4 +113,25 @@ async def generate_quiz(subtopic: str) -> str:
             ),
         )
         raise ValueError("quiz response missing 'all_questions' key")
+    _shuffle_options(parsed["all_questions"])
     return json.dumps(parsed, ensure_ascii=False)
+
+
+def _shuffle_options(questions: list[dict]) -> None:
+    """Randomize option order per question so the correct answer is uniformly
+    distributed across A/B/C/D. LLMs bias toward middle indices regardless of
+    prompt instructions, so we enforce distribution at the code level.
+    """
+
+    rng = secrets.SystemRandom()
+    for q in questions:
+        options = q.get("options")
+        correct_id = q.get("correct_option_id")
+        if not isinstance(options, list) or not isinstance(correct_id, int):
+            continue
+        if not (0 <= correct_id < len(options)):
+            continue
+        indices = list(range(len(options)))
+        rng.shuffle(indices)
+        q["options"] = [options[i] for i in indices]
+        q["correct_option_id"] = indices.index(correct_id)
