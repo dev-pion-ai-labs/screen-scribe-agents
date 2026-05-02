@@ -59,9 +59,35 @@ def classify_upstream_error(exc: BaseException) -> UpstreamError:
     if isinstance(exc, UpstreamError):
         return exc
 
+    import json as _json
+
+    if isinstance(exc, _json.JSONDecodeError):
+        return UpstreamError(
+            status_code=502,
+            code="invalid_model_output",
+            message=(
+                "The AI model returned a response we couldn't parse. "
+                "Please retry — if it keeps failing, try a different subtopic."
+            ),
+            transient=True,
+        )
+
     text = str(exc) or exc.__class__.__name__
     lowered = text.lower()
     retry_after = _extract_retry_after(text)
+
+    if isinstance(exc, ValueError) and (
+        "missing" in lowered or "all_questions" in lowered or "expected" in lowered
+    ):
+        return UpstreamError(
+            status_code=502,
+            code="invalid_model_output",
+            message=(
+                "The AI model returned an unexpected response shape. "
+                "Please retry — if it keeps failing, try a different subtopic."
+            ),
+            transient=True,
+        )
 
     # Rate limit / quota
     if (

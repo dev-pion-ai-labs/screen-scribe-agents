@@ -10,7 +10,10 @@ import yaml
 from crewai import Agent, Crew, Process, Task
 
 from app.config import get_settings
+from app.core.logging import get_logger, log_extra
 from app.services.document_store import get_documents_text
+
+logger = get_logger(__name__)
 
 CREW_DIR = Path(__file__).parent
 DATA_DIR = CREW_DIR / "data"
@@ -85,8 +88,28 @@ async def generate_quiz(subtopic: str) -> str:
     # Frontend (CreateQuiz.tsx) expects { output: "<json string with all_questions[]>" }.
     # Validate that we have parseable JSON before returning, but return the JSON
     # *string* unchanged — the React parser does its own JSON.parse.
-    payload = _extract_json(str(raw))
-    parsed = json.loads(payload)
+    raw_text = str(raw)
+    payload = _extract_json(raw_text)
+    try:
+        parsed = json.loads(payload)
+    except json.JSONDecodeError:
+        logger.error(
+            "quiz.invalid_json",
+            extra=log_extra(
+                subtopic=subtopic[:200],
+                raw_preview=raw_text[:1000],
+                payload_preview=payload[:1000],
+            ),
+        )
+        raise
     if "all_questions" not in parsed:
+        logger.error(
+            "quiz.missing_key",
+            extra=log_extra(
+                subtopic=subtopic[:200],
+                keys=list(parsed.keys()),
+                raw_preview=raw_text[:1000],
+            ),
+        )
         raise ValueError("quiz response missing 'all_questions' key")
     return json.dumps(parsed, ensure_ascii=False)
