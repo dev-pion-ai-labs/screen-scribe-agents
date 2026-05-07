@@ -42,8 +42,8 @@ def _build_agent() -> Agent:
     )
 
 
-async def _evaluation_document_content(filename: str) -> str:
-    text = await get_document_text(filename) if filename else ""
+async def _evaluation_document_content(filename: str, subtopic: str) -> str:
+    text = await get_document_text(filename, subtopic=subtopic) if filename else ""
     return text if text else "(no full-text content available — rely on the document name and general knowledge)"
 
 
@@ -51,7 +51,7 @@ async def generate_assignment(subtopic: str) -> str:
     agent = _build_agent()
     tasks_cfg = _load_yaml("tasks.yaml")["generate_assignment"]
     eval_doc = lookup_evaluation_document(subtopic)
-    eval_doc_content = await _evaluation_document_content(eval_doc)
+    eval_doc_content = await _evaluation_document_content(eval_doc, subtopic)
     task = Task(
         description=tasks_cfg["description"].format(
             subtopic=subtopic,
@@ -70,7 +70,7 @@ async def revise_assignment(subtopic: str, content: str, changes: str) -> str:
     agent = _build_agent()
     tasks_cfg = _load_yaml("tasks.yaml")["revise_assignment"]
     eval_doc = lookup_evaluation_document(subtopic)
-    eval_doc_content = await _evaluation_document_content(eval_doc)
+    eval_doc_content = await _evaluation_document_content(eval_doc, subtopic)
     task = Task(
         description=tasks_cfg["description"].format(
             subtopic=subtopic,

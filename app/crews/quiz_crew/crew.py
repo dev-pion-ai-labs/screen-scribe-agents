@@ -56,7 +56,7 @@ async def generate_quiz(subtopic: str) -> str:
     settings = get_settings()
     materials = lookup_reading_materials(subtopic)
     materials_block = ", ".join(materials) if materials else "(none assigned)"
-    materials_content = await get_documents_text(materials)
+    materials_content = await get_documents_text(materials, subtopic=subtopic)
     materials_content_block = (
         materials_content
         if materials_content

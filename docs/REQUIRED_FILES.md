@@ -1,8 +1,38 @@
 # Required Files for Existing Crews
 
-The list of source documents the current `notes_crew`, `quiz_crew`, and `assignment_crew` reference by name. Until these files actually exist on disk (or in a vector store / RAG layer), the crews are passing the lead just the *titles* into the prompt — the LLM never sees the underlying content.
+The list of source documents the current `notes_crew`, `quiz_crew`, and `assignment_crew` reference by name.
 
 All 34 files are linked from `docs/FOR DEVELOPER - AI INPUT SHEET 17062025 - B.A., (H) FILMMAKING.xlsx` (curriculum sheet, 100% coverage confirmed). The `scripts/download_curriculum.py` script pulls them into `docs/curriculum-pull/<sheet>/...`.
+
+## How the bucket is laid out
+
+```
+curriculum/
+├── <whole-book>.txt                        # source of truth, full extracted text
+├── <book-slug>__<subtopic-slug>.txt        # per-subtopic excerpt (top-5 chunks via hybrid retrieval)
+└── _embeddings/
+    └── <book-slug>.json                    # offline pipeline cache: chunks + Gemini embeddings + source SHA-256
+```
+
+- The runtime (`app/services/document_store.py:get_document_text`) fetches the per-subtopic excerpt first; on 404 it falls back to the whole-book file. Same shape for both notes/quiz reading materials and assignment evaluation docs.
+- The excerpt files are produced by `scripts/build_curriculum_excerpts.py` (run on demand). Install pipeline deps first: `pip install -e ".[pipeline]"`.
+- The `_embeddings/` prefix is internal to the pipeline. The runtime never reads it.
+
+Common operations:
+
+```bash
+# Full backfill (every book × every subtopic the YAMLs reference):
+python scripts/build_curriculum_excerpts.py
+
+# Rebuild excerpts for one book after re-uploading its source .txt:
+python scripts/build_curriculum_excerpts.py --book "Bruce-Block-The-Visual-Story-...txt"
+
+# Rebuild every book's excerpt for one subtopic:
+python scripts/build_curriculum_excerpts.py --subtopic "blocking and staging"
+
+# Preview without uploading:
+python scripts/build_curriculum_excerpts.py --dry-run
+```
 
 ## Books / PDFs (20 — used by `notes_crew` & `quiz_crew`)
 

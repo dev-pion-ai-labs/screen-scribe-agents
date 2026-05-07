@@ -37,7 +37,7 @@ async def _build_crew(subtopic: str, reading_materials: list[str]) -> Crew:
     tasks_cfg = _load_yaml("tasks.yaml")
 
     materials_block = ", ".join(reading_materials) if reading_materials else "(none assigned)"
-    materials_content = await get_documents_text(reading_materials)
+    materials_content = await get_documents_text(reading_materials, subtopic=subtopic)
     materials_content_block = (
         materials_content
         if materials_content
