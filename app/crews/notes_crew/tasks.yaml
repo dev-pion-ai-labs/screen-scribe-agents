@@ -13,12 +13,40 @@ write_notes:
 
     Use a conversational, question-and-answer style. Anticipate student questions
     (e.g. "You might wonder why... The answer is..."), and respond as if engaging a
-    curious teen. Use clear, beginner-friendly language. Include analogies (e.g.
-    "editing is like a song's beat"). Use the web search tool to find recent
-    (2020-{current_year}) film examples for the notes. Across the entire document,
-    use at least 4 distinct film examples, with at least 3 of them being Indian
-    films released in 2020 or later. Do not reuse the same film in more than one
-    section.
+    curious teen. Include analogies (e.g. "editing is like a song's beat"). Use the
+    web search tool to find recent (2020-{current_year}) film examples. Across the
+    entire document, use at least 4 distinct film examples, with at least 3 of them
+    being Indian films released in 2020 or later. Do not reuse the same film in
+    more than one section.
+
+    LANGUAGE RULES (these override anything you've absorbed from the reading
+    materials' academic tone):
+    - Target Grade 8 reading level. A 14-year-old should follow every sentence on
+      the first read.
+    - Average sentence length under 18 words. Break long sentences into two.
+    - Prefer everyday words over technical ones. When you must use a film term
+      (e.g. "mise-en-scène", "diegetic"), define it in the same sentence in plain
+      English ("mise-en-scène — basically, everything you see inside the frame").
+    - Never copy the reading materials' sentence structure. Rewrite every borrowed
+      idea in your own simpler words.
+    - Banned phrases that signal academic tone: "moreover", "furthermore", "thus",
+      "hence", "in essence", "fundamentally", "it is important to note",
+      "constitutes", "delineates", "encapsulates", "paradigm".
+    - No semicolons. No em-dash chains. No nested clauses three levels deep.
+    - Active voice over passive. "The director frames the shot" — not "the shot is
+      framed by the director".
+
+    FORMATTING RULES (apply throughout — heavy formatting is the goal, not a wall
+    of prose):
+    - Keep paragraphs to 2-3 sentences max. Break often.
+    - Use **bold** for the first appearance of any film term or key concept.
+    - Use bullet lists whenever you have 3+ parallel items. Don't bury lists inside
+      a paragraph.
+    - Use numbered lists for steps or sequences.
+    - Inside each section, include at least one of: a bullet list, a numbered list,
+      or a blockquote (`>`) callout for a memorable line / "Quick takeaway".
+    - End every Question section (1-4) with a one-line **Quick takeaway:** in bold,
+      summarising the section in under 20 words.
 
     Ground core explanations in the assigned reading materials, but never mention
     them inline. Only refer to them in the final "Reference Materials" section.
@@ -26,34 +54,52 @@ write_notes:
     principle, or technique drawn from the reading materials — not generic film
     knowledge. The reading material may be longer than what's directly relevant;
     concentrate on the chapters or passages that address {subtopic} and skim the
-    rest.
+    rest. When you borrow an idea, REPHRASE it — do not preserve the textbook's
+    wording.
 
     Output structure (use exactly this markdown skeleton):
 
     # {subtopic} Notes
 
+    > **In one line:** [a single-sentence hook for the whole topic in plain English]
+
     ## What is {subtopic} All About?
-    [Explain purpose and relevance, with a recent web-sourced example.]
+    [2-3 short paragraphs explaining purpose and relevance, with one recent
+    web-sourced example. End with a bullet list titled **You'll learn:** of 3-4
+    bullets previewing what the notes cover.]
 
     ## [Question 1 — frame as: What is it & why does it matter?]
-    [Define the concept and explain its relevance, using one specific idea from
-    the reading materials and a modern film example. Address a student doubt
-    directly.]
+    [Open with a short paragraph defining the concept in plain English. Then a
+    bullet list of 3-4 key points drawn from the reading materials (rephrased,
+    not quoted). Then a paragraph applying it to one modern Indian film example.
+    Address a student doubt directly.]
+
+    **Quick takeaway:** [one-line summary in bold]
 
     ## [Question 2 — frame as: How does it work mechanically?]
-    [Explain the underlying process or structure using a reading-material insight,
-    an analogy, and a web-sourced example.]
+    [Open with a short paragraph + analogy. Then a **numbered list** of the steps
+    or stages in the process. Then one short paragraph applying it to a
+    web-sourced film example.]
+
+    **Quick takeaway:** [one-line summary in bold]
 
     ## [Question 3 — frame as: What is a key element or principle?]
-    [Detail one core concept from the reading material in depth, with a popular
-    film example and a recent one.]
+    [Open with a short paragraph. Then a bullet list of the principle's
+    sub-elements or rules. Then a paragraph comparing a popular film and a recent
+    one.]
+
+    **Quick takeaway:** [one-line summary in bold]
 
     ## [Question 4 — frame as: How do I apply it, and what's a common mistake?]
-    [Give practical steps for analysis or creation, plus one common pitfall
-    students should avoid, plus a web-sourced tip.]
+    [Open with a short paragraph. Then a numbered list titled **Try this:** of
+    3-5 practical steps. Then a blockquote callout starting with `> **Watch out:**`
+    describing one common pitfall, and a web-sourced tip.]
+
+    **Quick takeaway:** [one-line summary in bold]
 
     ## What's the Point of All This?
-    [Summarise importance, address one final doubt, encourage practice.]
+    [Short closing paragraph summarising importance and addressing one final
+    doubt, ending with a one-line encouragement to practise.]
 
     ## Reference Materials
     Learn more using: {reading_materials_inline}
@@ -74,11 +120,16 @@ write_notes:
     - Output anything like "【8:18†Film Art_ An Introduction】" — never include
       square-bracket source citations.
     - Mention reading material titles inline; only in the Reference Materials section.
-    - Include hashtags or asterisks/stars in the content.
+    - Include social-media hashtags (e.g. "#cinema") or decorative star/asterisk
+      separators (e.g. "***", "* * *") in the content. Standard markdown
+      `**bold**` and bullet `-` are required and do not count as decorative.
     - Ask the student a follow-up like "Would you like help with another part?".
     - Use framing like "According to the book...", "The reading materials state...",
       or any phrase that signals a source. State the concept directly.
     - Repeat the same film example in more than one section.
+    - Use any banned academic-register word listed in LANGUAGE RULES.
+    - Write paragraphs longer than 3 sentences. Break them.
+    - Skip the **Quick takeaway:** line at the end of any Question section.
 
   expected_output: >
     A single markdown document approximately 2200-2400 words long, following the
