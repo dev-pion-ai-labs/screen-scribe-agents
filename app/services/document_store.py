@@ -36,10 +36,9 @@ def _public_url(filename: str) -> str:
 async def get_document_text(filename: str) -> str:
     """Return text for one curriculum document.
 
-    Curriculum docs are stored as ``.txt`` siblings of their original
-    filenames. The YAMLs reference some entries with ``.pdf``/``.docx``
-    extensions and others bare; we strip any known extension and append
-    ``.txt`` so a single bucket layout serves all three crews.
+    Curriculum docs are stored as ``.txt`` files in the bucket. The YAMLs
+    are the source of truth for the storage filename — we fetch it verbatim,
+    no extension rewriting. URLs and empty values are skipped.
 
     Returns ``""`` for entries that aren't real files (URLs, missing uploads).
     """
@@ -57,14 +56,7 @@ async def get_document_text(filename: str) -> str:
         )
         return cached
 
-    base = filename
-    lower = filename.lower()
-    for ext in (".pdf", ".docx", ".doc"):
-        if lower.endswith(ext):
-            base = filename[: -len(ext)]
-            break
-
-    url = _public_url(base + ".txt")
+    url = _public_url(filename)
     started = time.perf_counter()
     try:
         text = await fetch_plain_text(url)
@@ -74,7 +66,6 @@ async def get_document_text(filename: str) -> str:
                 "curriculum.fetch_ok",
                 extra=log_extra(
                     doc=filename,
-                    resolved=base + ".txt",
                     chars=len(text),
                     duration_ms=duration_ms,
                 ),
@@ -82,11 +73,7 @@ async def get_document_text(filename: str) -> str:
         else:
             logger.warning(
                 "curriculum.fetch_empty",
-                extra=log_extra(
-                    doc=filename,
-                    resolved=base + ".txt",
-                    duration_ms=duration_ms,
-                ),
+                extra=log_extra(doc=filename, duration_ms=duration_ms),
             )
     except Exception as exc:
         duration_ms = round((time.perf_counter() - started) * 1000, 2)
@@ -94,7 +81,6 @@ async def get_document_text(filename: str) -> str:
             "curriculum.fetch_failed",
             extra=log_extra(
                 doc=filename,
-                resolved=base + ".txt",
                 url=url,
                 duration_ms=duration_ms,
                 error=str(exc)[:300],

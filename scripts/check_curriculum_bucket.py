@@ -20,7 +20,11 @@ BUCKET = "curriculum"
 
 
 def expected_basenames() -> set[str]:
-    """Mirror the extension-stripping rule in document_store.get_document_text."""
+    """Collect every fetchable .txt filename referenced by the crew YAMLs.
+
+    The YAMLs are the source of truth — they already carry the .txt suffix.
+    URLs and activity flags (entries that don't end in .txt) are skipped.
+    """
     names: set[str] = set()
 
     for yaml_path in [
@@ -30,30 +34,16 @@ def expected_basenames() -> set[str]:
         data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
         for vals in data.values():
             for v in vals:
-                if v.startswith("http"):
-                    continue
-                names.add(v)
+                if v.endswith(".txt"):
+                    names.add(v)
 
     eval_path = ROOT / "app/crews/assignment_crew/data/evaluation_documents.yaml"
     eval_data = yaml.safe_load(eval_path.read_text(encoding="utf-8"))
-    activity_flags = {
-        "Shoot", "shoot", "theory", "Practical class with acting dept",
-        "in class exercise", "group discussion - culminated three modules above",
-    }
     for v in eval_data.values():
-        if v in activity_flags:
-            continue
-        names.add(v)
+        if v.endswith(".txt"):
+            names.add(v)
 
-    out: set[str] = set()
-    for n in names:
-        lower = n.lower()
-        for ext in (".pdf", ".docx", ".doc"):
-            if lower.endswith(ext):
-                n = n[: -len(ext)]
-                break
-        out.add(n + ".txt")
-    return out
+    return names
 
 
 def list_bucket() -> set[str]:

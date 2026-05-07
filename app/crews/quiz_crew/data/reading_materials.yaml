@@ -1,134 +1,135 @@
 # Subtopic -> reading materials. Ported from n8n workflow "Quiz" Code node.
-# This list differs from notes_crew/data/reading_materials.yaml in that
-# entries here include file extensions (.pdf) — keep them as-is so the
-# prompt receives exactly what the n8n version received.
+# Filenames here are the raw n8n slugs (the original PDF basenames) with
+# .txt extensions — they map 1:1 to objects in the Supabase curriculum bucket.
+# notes_crew uses pretty book titles for the same subtopics; both lookups
+# must stay distinct so each crew's prompt receives the exact text it expects.
 
 "film analysis":
-  - "How to Read a Film_ Movies, Media, and Beyond.pdf"
-  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf"
+  - "How to Read a Film_ Movies, Media, and Beyond.txt"
+  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).txt"
 "different approaches to shoot and types of film":
-  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf"
+  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).txt"
 "case studies of filmmakers and their approach":
-  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf"
+  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).txt"
 "case studies of filmmakers in historical perspective":
-  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf"
+  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).txt"
 "writing actuality report":
-  - "Ways of Seeing .pdf"
+  - "Ways of Seeing .txt"
 "film diary (analysis of films, director and scripts, thoughts, ideas/stories,scenes, photographs)":
-  - "How to Read a Film_ Movies, Media, and Beyond.pdf"
-  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).pdf"
+  - "How to Read a Film_ Movies, Media, and Beyond.txt"
+  - "Film Art_ An Introduction 10th Edition ( PDFDrive ).txt"
 "introduction to visual storytelling (composition, cutting, closeup, continuity, camera angle)":
-  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf"
+  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).txt"
 "recreating a painting":
-  - "Ways of Seeing .pdf"
+  - "Ways of Seeing .txt"
 "collaboration with camera, edit and sound":
-  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf"
+  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).txt"
 "turning actualities into stories (writing on observation)":
-  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf"
+  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.txt"
 "trip to closed public space (e.g. library, museum)":
-  - "Ways of Seeing .pdf"
+  - "Ways of Seeing .txt"
 "trip to an open public space (e.g. park, market place, bus stop)":
-  - "Ways of Seeing .pdf"
+  - "Ways of Seeing .txt"
 "decoupage (cutting scripts and planning visual for cinematic connection) and continuity":
-  - "Film editing karel reiz.pdf"
+  - "Film editing karel reiz.txt"
 "aspects of continuity":
-  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).pdf"
+  - "The Five C's of Cinematography_ Motion Picture Filming Techniques(1).txt"
 "time and space in films":
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "scene analysis of classical hollywood films and contemporary films":
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "research":
-  - "On Writing_ A Memoir of the Craft - Stephen King.pdf"
+  - "On Writing_ A Memoir of the Craft - Stephen King.txt"
 "types of stories":
-  - "Short stories by Guy de Maupassant.pdf"
+  - "Short stories by Guy de Maupassant.txt"
 "developing a concept":
-  - "On Writing_ A Memoir of the Craft - Stephen King.pdf"
+  - "On Writing_ A Memoir of the Craft - Stephen King.txt"
 "usage of vfx elements":
-  - "Short stories by Guy de Maupassant.pdf"
-  - "On Writing_ A Memoir of the Craft - Stephen King.pdf"
+  - "Short stories by Guy de Maupassant.txt"
+  - "On Writing_ A Memoir of the Craft - Stephen King.txt"
 "oral narrative skills":
-  - "On Writing_ A Memoir of the Craft - Stephen King.pdf"
+  - "On Writing_ A Memoir of the Craft - Stephen King.txt"
 "creative writing (personal memoir, descriptive writing)":
-  - "On Writing_ A Memoir of the Craft - Stephen King.pdf"
+  - "On Writing_ A Memoir of the Craft - Stephen King.txt"
 "reading and analysis of short stories":
-  - "Short stories by Guy de Maupassant.pdf"
-  - "The Stories of Anton Chekhov (Anton Chekhov).pdf"
+  - "Short stories by Guy de Maupassant.txt"
+  - "The Stories of Anton Chekhov (Anton Chekhov).txt"
 "history of storytelling":
-  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf"
+  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.txt"
 "screenplay writing - overview and process":
-  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf"
+  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.txt"
 "elements of a screenplay":
-  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf"
-  - "the-anatomy-of-story-22-steps-to-becoming-a-master-storyteller_compress.pdf"
+  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.txt"
+  - "the-anatomy-of-story-22-steps-to-becoming-a-master-storyteller_compress.txt"
 "premise, plot, treatment, characters, conflict":
-  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.pdf"
-  - "Art of Dramatic Writing - Lajos Egri.pdf"
+  - "Screenplay; The Foundations of Screenwriting, revised & updated - Syd Field.txt"
+  - "Art of Dramatic Writing - Lajos Egri.txt"
 "screenwriting softwares":
   - "https://www.celtx.com/ and https://www.studiovity.com/"
 "introductions to story structures - i (three-act structure, 5 act structure)":
-  - "toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.pdf"
-  - "Aristotle_Poetics_Lucas_Kassel_1968_1980.pdf"
+  - "toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.txt"
+  - "Aristotle_Poetics_Lucas_Kassel_1968_1980.txt"
 "creating simple screenplays using 3 act structure":
-  - "toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.pdf"
+  - "toaz.info-save-the-cat-by-blake-snyder-pr_8defda23000f86ee7b077787303fa715.txt"
 "understanding the concept of staging and blocking":
-  - "Film Directing Shot by shot .pdf"
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Film Directing Shot by shot .txt"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "types of staging and blocking":
-  - "Film Directing Shot by shot .pdf"
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Film Directing Shot by shot .txt"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "usage of props and space":
-  - "Film Directing Shot by shot .pdf"
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Film Directing Shot by shot .txt"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "i, a, l, c, s patterns":
-  - "Film Directing Shot by shot .pdf"
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Film Directing Shot by shot .txt"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "blocking for vfx":
-  - "Film Directing Shot by shot .pdf"
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Film Directing Shot by shot .txt"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 "staging a scene with actors":
-  - "ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.pdf"
-  - "Directing Actors_ Creating Memorable Performances for Film & Television.pdf"
+  - "ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.txt"
+  - "Directing Actors_ Creating Memorable Performances for Film & Television.txt"
 "exercise on improvisation":
-  - "ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.pdf"
+  - "ilide.info-becoming-an-actorx27s-director-directing-actors-for-film-and-television-regg-pr_2c3d1d2c691c8c718bed0ca1c547c1e1.txt"
 "styles of acting":
-  - "Directing Actors_ Creating Memorable Performances for Film & Television.pdf"
+  - "Directing Actors_ Creating Memorable Performances for Film & Television.txt"
 "difference between stage and film acting":
-  - "Directing Actors_ Creating Memorable Performances for Film & Television.pdf"
+  - "Directing Actors_ Creating Memorable Performances for Film & Television.txt"
 "working with virtual/digital actors : possibilities & limitations":
-  - "Directing Actors_ Creating Memorable Performances for Film & Television.pdf"
+  - "Directing Actors_ Creating Memorable Performances for Film & Television.txt"
 "dialogue – acting - composition-staging and blocking along with use of visualization tools like":
-  - "IDS SEM I-SPW"
-  - "IDS SEM II - parameters_dialogue"
+  - "IDS SEM I-SPW.txt"
+  - "IDS SEM II - parameters_dialogue.txt"
 "traditional/digital storyboards & ai tools for mood boards":
-  - "IDS SEM I-SPW"
-  - "IDS SEM II - parameters_dialogue"
+  - "IDS SEM I-SPW.txt"
+  - "IDS SEM II - parameters_dialogue.txt"
 "dialogue, monologue and conversation":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "types of dialogue":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "writing effective dialogue":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "dialogue through observation":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "dialogue in a situation":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "story structures ii (hero's journey, dan harmon story circle)":
-  - "The Writer's Journey.pdf"
-  - "On Dialogue.pdf"
+  - "The Writer's Journey.txt"
+  - "On Dialogue.txt"
 "creating effective story conflicts":
-  - "Dialogue_-_Robert_McKee.pdf"
-  - "On Dialogue.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
+  - "On Dialogue.txt"
 "usage of edit, sound and bgm from director's point of view":
-  - "Film editing karel reiz.pdf"
+  - "Film editing karel reiz.txt"
 "tonalities of dialogue":
-  - "Dialogue_-_Robert_McKee.pdf"
+  - "Dialogue_-_Robert_McKee.txt"
 "space and action dynamics":
-  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.pdf"
+  - "Bruce-Block-The-Visual-Story-Creating-the-Visual-Structure-of-Film-TV-And-Digital-Media-2021.txt"
 
 # === MA Filmmaking — Sem 1 + Sem 2 ===
 # Auto-generated from screen-scribe-pilot/scripts/gen_ma_yaml.py
@@ -136,912 +137,912 @@
 
 # Direction I: Visual Storytelling
 "analysis and study of paintings":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "blocking and staging":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "lensing and camera angle":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "continuity actuality trip":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 
 # Direction I: Dialogue, Narrative and Dramatic Tension
 "analysis and study of film – introduction to western and indian narratology":
-  - "Directing Actors - Judith Weston"
+  - "Directing Actors - Judith Weston.txt"
 "creating and maintaining dramatic tension":
-  - "Directing Actors - Judith Weston"
+  - "Directing Actors - Judith Weston.txt"
 "creating scenes with dialogue":
-  - "Directing Actors - Judith Weston"
+  - "Directing Actors - Judith Weston.txt"
 "shooting a dramatic scene with dialogue":
-  - "Directing Actors - Judith Weston"
+  - "Directing Actors - Judith Weston.txt"
 
 # Direction I: Spatio-Temporal Relationships
 "real time":
-  - "Sculpting in Time - Andrei Tarkovsky"
-  - "In the Blink of an Eye - Walter Murch"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "compression and expansion of time":
-  - "Sculpting in Time - Andrei Tarkovsky"
-  - "In the Blink of an Eye - Walter Murch"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "shooting a scene exploring spatio-temporal relationships – shooting a short fiction":
-  - "Sculpting in Time - Andrei Tarkovsky"
-  - "In the Blink of an Eye - Walter Murch"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 
 # Direction I: Introduction to Documentary
 "history of documentary":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "modes of documentary":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "types of documentary":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "sequencing for documentary":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "research and preparing documentary proposal":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 
 # Direction I: Documentary Shoot
 "documentary – pre-production":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "documentary – production":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 "documentary – post-production":
-  - "Introduction to Documentary - Bill Nichols (3rd Edition)"
-  - "Directing the Documentary - Michael Rabiger & Courtney Hermann"
+  - "Introduction to Documentary - Bill Nichols (3rd Edition).txt"
+  - "Directing the Documentary - Michael Rabiger & Courtney Hermann.txt"
 
 # Entertainment Business Management: Media and Entertainment Industry
 "introduction to media & entertainment as a business":
-  - "Media & Entertainment Industry overview"
-  - "imdb_report"
+  - "Media & Entertainment Industry overview.txt"
+  - "imdb_report.txt"
 "evaluating success parameters of films and projects":
-  - "Media & Entertainment Industry overview"
-  - "imdb_report"
+  - "Media & Entertainment Industry overview.txt"
+  - "imdb_report.txt"
 
 # Entertainment Business Management: The Role of a Producer
 "scope and role of the producer":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "film finance, development and packaging":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "content curation and creation":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "achieving project greenlight":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "scope and purpose of pitch decks":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 
 # Entertainment Business Management: The Production and Distribution Stage
 "role of the producer in the production stage":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "on-set project management":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "distribution and exhibition models":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "evaluating current trends":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 
 # Entertainment Business Management: Producing for Non-fiction
 "producing for documentaries and the role of the documentary producer":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "budgeting and funding strategies for documentaries":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "exploring the episodic documentary medium":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 "practical exposure and live documentary project":
-  - "Producer to Producer"
-  - "The Complete Film Production Handbook"
+  - "Producer to Producer.txt"
+  - "The Complete Film Production Handbook.txt"
 
 # Screenwriting I: Ideating a Story
 "using observation of our environment to create stories":
-  - "Screenplay - Syd Field (2005)"
-  - "Big Magic - Elizabeth Gilbert"
+  - "Screenplay - Syd Field (2005).txt"
+  - "Big Magic - Elizabeth Gilbert.txt"
 "types of stories (reading and analysis of short stories / scripts)":
-  - "Screenplay - Syd Field (2005)"
-  - "Big Magic - Elizabeth Gilbert"
+  - "Screenplay - Syd Field (2005).txt"
+  - "Big Magic - Elizabeth Gilbert.txt"
 "screenwriting overview (industrial practices and explanations, software)":
-  - "Screenplay - Syd Field (2005)"
-  - "Big Magic - Elizabeth Gilbert"
+  - "Screenplay - Syd Field (2005).txt"
+  - "Big Magic - Elizabeth Gilbert.txt"
 
 # Screenwriting I: Foundation of Narrative
 "aristotle's poetics":
-  - "Aristotle's Poetics"
-  - "Indian Narratology - K. Ayyappa Paniker"
+  - "Aristotle's Poetics.txt"
+  - "Indian Narratology - K. Ayyappa Paniker.txt"
 "indian narratology":
-  - "Aristotle's Poetics"
-  - "Indian Narratology - K. Ayyappa Paniker"
+  - "Aristotle's Poetics.txt"
+  - "Indian Narratology - K. Ayyappa Paniker.txt"
 "story and discourse":
-  - "Aristotle's Poetics"
-  - "Indian Narratology - K. Ayyappa Paniker"
+  - "Aristotle's Poetics.txt"
+  - "Indian Narratology - K. Ayyappa Paniker.txt"
 
 # Screenwriting I: Elements of a Screenplay - I
 "elements of screenplay (premise, characters, setting, plot, conflict, dialogue)":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 "developing a screenplay concept":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 "premise":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 "characters (create compelling characters)":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 "setting":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 "relationship between character and setting":
-  - "Story - Robert McKee"
-  - "The Art of Dramatic Writing - Lajos Egri"
+  - "Story - Robert McKee.txt"
+  - "The Art of Dramatic Writing - Lajos Egri.txt"
 
 # Screenwriting I: Elements of a Screenplay - II
 "elements of plot":
-  - "The Art of Plotting - Linda J Cowgill"
-  - "The Writer's Journey - Christopher Vogler"
+  - "The Art of Plotting - Linda J Cowgill.txt"
+  - "The Writer's Journey - Christopher Vogler.txt"
 "creating conflict in a plot":
-  - "The Art of Plotting - Linda J Cowgill"
-  - "The Writer's Journey - Christopher Vogler"
+  - "The Art of Plotting - Linda J Cowgill.txt"
+  - "The Writer's Journey - Christopher Vogler.txt"
 "character and narrative arcs":
-  - "The Art of Plotting - Linda J Cowgill"
-  - "The Writer's Journey - Christopher Vogler"
+  - "The Art of Plotting - Linda J Cowgill.txt"
+  - "The Writer's Journey - Christopher Vogler.txt"
 "creating and breaking screenplay beats":
-  - "The Art of Plotting - Linda J Cowgill"
-  - "The Writer's Journey - Christopher Vogler"
+  - "The Art of Plotting - Linda J Cowgill.txt"
+  - "The Writer's Journey - Christopher Vogler.txt"
 "introductions to narrative structures (hero's journey, dan harmon story structure, 3 act and 5 act structures)":
-  - "The Art of Plotting - Linda J Cowgill"
-  - "The Writer's Journey - Christopher Vogler"
+  - "The Art of Plotting - Linda J Cowgill.txt"
+  - "The Writer's Journey - Christopher Vogler.txt"
 
 # Screenwriting I: Dialogue in Cinema
 "understanding role of dialogue in cinema":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 "dialogue, monologue and conversation in cinema":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 "types of cinema dialogue":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 "writing effective cinema dialogue":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 "cinema dialogue through observation":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 "cinema dialogue in a situation":
-  - "On Dialogue - David Bohm"
-  - "The Tools of Screenwriting - David Howard & Edward Mabley"
+  - "On Dialogue - David Bohm.txt"
+  - "The Tools of Screenwriting - David Howard & Edward Mabley.txt"
 
 # Cinematography I: Visual Storytelling Basics
 "camera angles and visual storytelling":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "continuity basics":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "cutting and narrative flow":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "close-ups and emphasis":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "composition and framing aesthetics":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "cheating techniques":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 "scene exercise (visual storytelling)":
-  - "The Five C's of Cinematography"
+  - "The Five C's of Cinematography.txt"
 
 # Cinematography I: Basic Camera Operations
 "introduction to basic motion picture cameras and lenses":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "panning and tilting":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "functions of camera movement":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "motivated vs. unmotivated movement":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "purpose & emotion":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "understanding momentum, rhythm, pace and tempo":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "focus pulling methods":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 "scene exercise (camera operations)":
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 
 # Cinematography I: Film Lighting Basics
 "history of lighting":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "introduction to luminaires":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "understanding electricity and safety":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "photometrics":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "lighting principles":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "understanding and adapting to available light":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "three point lighting":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "lighting recreation":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "scene exercise (lighting)":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 
 # Cinematography I: Color Correction
 "color correcting a davinci resolve timeline":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "balancing footage":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "creating color continuity":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "correcting and enhancing isolated areas":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "managing nodes and grades":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "adjusting image properties":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "setting up raw projects":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "delivering projects":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "scene exercise (color correction)":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 
 # Cinematography I: Workshop / Field Trip / Project
 "comprehensive workshop or field visit – shooting a scene adhering to basic principles of cinematography":
-  - "The Five C's of Cinematography"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "The Five C's of Cinematography.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 
 # Editing I: Narrative Structuring and Time in Editing
 "principles of editing applied for linearity, coherence and lucidity":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "approach to narrative construction (fiction and non-fiction)":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "examining time in real life vis-a-vis time in cinema":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "identifying different types of time in cinema":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "understanding duration vs timing":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "tools used for time manipulation on the edit table":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "dramatic emphasis & time-space relational treatment":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "pace – purpose, elements of pace, rhythm":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 
 # Editing I: Professional Workflow & Fundamentals of Digital Video Theory
 "setting up projects":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "input methods":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "basic editing workflow & application interface":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "essential tools & commands":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "timeline – tracks & clips":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "audio track laying – exporting":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "broadcast & color encoding systems (pal/ntsc/secam)":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 "structure of a video file (containers & codecs, bit rate & bit depth)":
-  - "Avid Media Composer Getting Started Guide"
-  - "Avid editing tutorials"
+  - "Avid Media Composer Getting Started Guide.txt"
+  - "Avid editing tutorials.txt"
 
 # Editing I: Dialog Editing
 "identifying different ways of communication (physical action, gestures, camera/space interaction, non-verbal expressions, audio)":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "reading shot compositions and camera movements – static & movement in dialogue sequences":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "impact of shot placements, juxtapositions, order and duration":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "use of reactions and pauses – dramatic emphasis in dialog editing":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "staging & blocking of shot compositions in editing":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "designing pace of the edit (genre, characterization, narrative intent)":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "dialog editing practical exercise – syncing & editing a dialog sequence":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "observation log report and folder structure":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 
 # Sound Design I: Advanced Dialog Recording and Editing
 "sync sound recording with advanced field recorders":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "working with advanced wireless microphones":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "noise elimination":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "dialogue loudness levels":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 
 # Sound Design I: Sound Editing
 "sound effects track laying":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "ambience designing (recording and layering)":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "simulating a realistic environment in a film":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 
 # Sound Design I: Introduction to Sound Design
 "identifying sound elements in a soundtrack":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "functions and roles of sound elements":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "decoding signs and syntaxes in sound":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "sound design in building time and space in cinema":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 
 # Sound Design I: Sound Recording, Structuring and Editing a Documentary
 "thematic structure of various forms of documentaries":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "working with interviews and voiceover recording":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "track laying – editing ambiences & sound effects for documentary":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "introduction to stereo mixing":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 "outputting for different formats":
-  - "MA Filmmaking — Sound Design I course material"
+  - "MA Filmmaking — Sound Design I course material.txt"
 
 # Production I: Working with the Creatives
 "analysis of the creative process":
-  - "The Complete Film Production Handbook"
-  - "Producer to Producer"
+  - "The Complete Film Production Handbook.txt"
+  - "Producer to Producer.txt"
 "budgetary constraints and production challenges":
-  - "The Complete Film Production Handbook"
-  - "Producer to Producer"
+  - "The Complete Film Production Handbook.txt"
+  - "Producer to Producer.txt"
 "working with creative and technical hods":
-  - "The Complete Film Production Handbook"
-  - "Producer to Producer"
+  - "The Complete Film Production Handbook.txt"
+  - "Producer to Producer.txt"
 "business scope and exploitation potential of a film project":
-  - "The Complete Film Production Handbook"
-  - "Producer to Producer"
+  - "The Complete Film Production Handbook.txt"
+  - "Producer to Producer.txt"
 
 # Production I: Reading a Script and Visualization
 "script reading and visualization process":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "evaluating requirements according to the screenplay":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "manual script breakdown process and categories":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 
 # Production I: Production Documentation
 "formats, budgeting and breakdown process":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "production software":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "international standard production formats":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "script breakdown using production software":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "shoot schedules and budgets":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 "call sheets and daily production reports":
-  - "The Complete Film Production Handbook"
+  - "The Complete Film Production Handbook.txt"
 
 # Production I: Technology and AI in Production
 "use of technology and ai in film production":
-  - "MA Filmmaking — Production I course material"
+  - "MA Filmmaking — Production I course material.txt"
 "ai tools in pre-visualization and visualization":
-  - "MA Filmmaking — Production I course material"
+  - "MA Filmmaking — Production I course material.txt"
 "film production software in planning":
-  - "MA Filmmaking — Production I course material"
+  - "MA Filmmaking — Production I course material.txt"
 "case studies of technology disruption in film and media":
-  - "MA Filmmaking — Production I course material"
+  - "MA Filmmaking — Production I course material.txt"
 
 # Direction II: Mise en Scène
 "colour":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "properties (on location and sourced)":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "actors":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "introduction, history and origin":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "roles and responsibilities":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "budgeting":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "architectural elements of set design":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "set decoration with props":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "marking active props from the script":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "the colour wheel":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "introduction to color palette":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "balanced colour harmonies":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "creating a mood board":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "costumes and story":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "creating and defining characters":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "costume design":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "research on period, fantasy and future garments":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "skin tone and pancake number":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 "make up and story":
-  - "The Visual Story - Bruce Block (3rd Edition)"
-  - "Film Art - An Introduction - David Bordwell & Kristin Thompson"
+  - "The Visual Story - Bruce Block (3rd Edition).txt"
+  - "Film Art - An Introduction - David Bordwell & Kristin Thompson.txt"
 
 # Direction II: Long Take
 "history of long take":
-  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition)"
-  - "Sculpting in Time - Andrei Tarkovsky"
+  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition).txt"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
 "analysis of long takes":
-  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition)"
-  - "Sculpting in Time - Andrei Tarkovsky"
+  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition).txt"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
 "different functions of long take":
-  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition)"
-  - "Sculpting in Time - Andrei Tarkovsky"
+  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition).txt"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
 "shooting and choreographing a long take":
-  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition)"
-  - "Sculpting in Time - Andrei Tarkovsky"
+  - "Directing - Film Techniques and Aesthetics - Michael Rabiger (4th Edition).txt"
+  - "Sculpting in Time - Andrei Tarkovsky.txt"
 
 # Direction II: Long Take and Montage
 "difference between long take and montage techniques":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "shooting same scene using long take and cuts":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "analysis of long takes and montage sequences":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "storytelling through songs":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "history of song sequence":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "music video":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "function of song sequence":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "analysis of song sequence":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 "shooting song sequence":
-  - "In the Blink of an Eye - Walter Murch"
-  - "The Film Sense - Sergei Eisenstein"
+  - "In the Blink of an Eye - Walter Murch.txt"
+  - "The Film Sense - Sergei Eisenstein.txt"
 
 # Direction II: Introduction to Different Formats
 "television (directing format)":
-  - "Writing the Pilot - William Rabkin"
-  - "TV Writing on Demand - Neil Landau"
+  - "Writing the Pilot - William Rabkin.txt"
+  - "TV Writing on Demand - Neil Landau.txt"
 "web series (directing format)":
-  - "Writing the Pilot - William Rabkin"
-  - "TV Writing on Demand - Neil Landau"
+  - "Writing the Pilot - William Rabkin.txt"
+  - "TV Writing on Demand - Neil Landau.txt"
 "new media and interactive cinema":
-  - "Writing the Pilot - William Rabkin"
-  - "TV Writing on Demand - Neil Landau"
+  - "Writing the Pilot - William Rabkin.txt"
+  - "TV Writing on Demand - Neil Landau.txt"
 "working on a show bible":
-  - "Writing the Pilot - William Rabkin"
-  - "TV Writing on Demand - Neil Landau"
+  - "Writing the Pilot - William Rabkin.txt"
+  - "TV Writing on Demand - Neil Landau.txt"
 
 # Screenwriting II: Understanding Archetypes
 "understanding character archetypes":
-  - "The Hero with a Thousand Faces - Joseph Campbell"
-  - "45 Master Characters - Victoria Lynn Schmidt"
+  - "The Hero with a Thousand Faces - Joseph Campbell.txt"
+  - "45 Master Characters - Victoria Lynn Schmidt.txt"
 "understanding story archetypes":
-  - "The Hero with a Thousand Faces - Joseph Campbell"
-  - "45 Master Characters - Victoria Lynn Schmidt"
+  - "The Hero with a Thousand Faces - Joseph Campbell.txt"
+  - "45 Master Characters - Victoria Lynn Schmidt.txt"
 
 # Screenwriting II: Advanced Screenwriting Concepts
 "text and subtext in screenplay writing":
-  - "The Anatomy of Story - John Truby"
-  - "Writing Subtext - Linda Seger"
+  - "The Anatomy of Story - John Truby.txt"
+  - "Writing Subtext - Linda Seger.txt"
 "elements of writing style (tone, rhythm, voice, allegory, ellipsis, metaphor, dramatic irony, figurative language)":
-  - "The Anatomy of Story - John Truby"
-  - "Writing Subtext - Linda Seger"
+  - "The Anatomy of Story - John Truby.txt"
+  - "Writing Subtext - Linda Seger.txt"
 "using structure to reflect theme":
-  - "The Anatomy of Story - John Truby"
-  - "Writing Subtext - Linda Seger"
+  - "The Anatomy of Story - John Truby.txt"
+  - "Writing Subtext - Linda Seger.txt"
 
 # Screenwriting II: Understanding Story Structures II
 "fichtean curve":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 "real-time structure":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 "multiple timeline structure":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 "hyperlink structure":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 "oneiric structure":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 "viewpoint narratives":
-  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush"
-  - "The 21st Century Screenplay - Linda Aronson"
+  - "Alternative Scriptwriting - Ken Dancyger & Jeff Rush.txt"
+  - "The 21st Century Screenplay - Linda Aronson.txt"
 
 # Screenwriting II: Writing for Different Formats
 "film":
-  - "Writing the TV Drama Series - Pamela Douglas"
-  - "The TV Writer's Workbook - Ellen Sandler"
+  - "Writing the TV Drama Series - Pamela Douglas.txt"
+  - "The TV Writer's Workbook - Ellen Sandler.txt"
 "television":
-  - "Writing the TV Drama Series - Pamela Douglas"
-  - "The TV Writer's Workbook - Ellen Sandler"
+  - "Writing the TV Drama Series - Pamela Douglas.txt"
+  - "The TV Writer's Workbook - Ellen Sandler.txt"
 "web series":
-  - "Writing the TV Drama Series - Pamela Douglas"
-  - "The TV Writer's Workbook - Ellen Sandler"
+  - "Writing the TV Drama Series - Pamela Douglas.txt"
+  - "The TV Writer's Workbook - Ellen Sandler.txt"
 "advertising":
-  - "Writing the TV Drama Series - Pamela Douglas"
-  - "The TV Writer's Workbook - Ellen Sandler"
+  - "Writing the TV Drama Series - Pamela Douglas.txt"
+  - "The TV Writer's Workbook - Ellen Sandler.txt"
 
 # Screenwriting II: Writing a Web Series
 "web series – an introduction":
-  - "Writing the Pilot - William Rabkin"
+  - "Writing the Pilot - William Rabkin.txt"
 "developing concepts for web series":
-  - "Writing the Pilot - William Rabkin"
+  - "Writing the Pilot - William Rabkin.txt"
 "structuring a web series":
-  - "Writing the Pilot - William Rabkin"
+  - "Writing the Pilot - William Rabkin.txt"
 "writer's room (collaborative work)":
-  - "Writing the Pilot - William Rabkin"
+  - "Writing the Pilot - William Rabkin.txt"
 "writing a pitch bible for a web series":
-  - "Writing the Pilot - William Rabkin"
+  - "Writing the Pilot - William Rabkin.txt"
 
 # Cinematography II: Digital Cinematography
 "motion picture film camera vs digital motion picture camera":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "image formation in a camera":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "in-camera exposure tools":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "scanning":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "sensors":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "types":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "differences & artifacts":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "color sampling":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "color space & gamma":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "linear, log and raw":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 "formats & compression":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
-  - "Digital Cinematography - David Stump"
-  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
+  - "Digital Cinematography - David Stump.txt"
+  - "The Filmmaker's Handbook - Steven Ascher & Edward Pincus.txt"
 
 # Cinematography II: Advanced Camera Operations 1
 "camera movements on track & trolley and basic gimbal":
-  - "Digital Cinematography - David Stump"
+  - "Digital Cinematography - David Stump.txt"
 "advanced focus pulling with wireless focus puller":
-  - "Digital Cinematography - David Stump"
+  - "Digital Cinematography - David Stump.txt"
 "scene exercise (advanced camera)":
-  - "Digital Cinematography - David Stump"
+  - "Digital Cinematography - David Stump.txt"
 
 # Cinematography II: Lighting Techniques 1
 "scene lighting principles and techniques":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "interiors and exteriors":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "variations and adaptations for different scene requirements":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 "scene exercise (advanced lighting)":
-  - "Lighting for Digital Video and Television - John Jackman"
+  - "Lighting for Digital Video and Television - John Jackman.txt"
 
 # Cinematography II: Colour Grading
 "conforming":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "reading footage from various cameras":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "color correction":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "color grading":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "shoot matching":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "case studies":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 "scene exercise (colour grading)":
-  - "Mastering Color - Alexis Van Hurkman"
+  - "Mastering Color - Alexis Van Hurkman.txt"
 
 # Cinematography II: Workshop / Field Trip / Project
 "comprehensive workshop or field visit – advanced cinematography":
-  - "Mastering Color - Alexis Van Hurkman"
-  - "Cinematography Theory and Practice - Blain Brown"
+  - "Mastering Color - Alexis Van Hurkman.txt"
+  - "Cinematography Theory and Practice - Blain Brown.txt"
 
 # Sound Design II: Visual Design for Music
 "classification and application of musical instruments":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "introduction to music structures":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "music editing":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 
 # Sound Design II: Editing Genres I
 "relationship of visual structure and sound design":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "pace and rhythm in cinema through edit and sound design":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "track laying for editing genres (dialogues, music, sfx)":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "sound effects designing for action scenes and trailers":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "layering and processing of sound effects":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 
 # Sound Design II: Sound Recording & Designing for Mise-en-scène
 "sound recording for mise-en-scène – placement and choreography with multiple microphones":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "understanding signal flow":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "recording and balancing live with audio mixers":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "noise reduction techniques for location sound":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "track laying for mise-en-scène (dialogues, music, sfx)":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 "sound effects editing for mise-en-scène":
-  - "MA Filmmaking — Sound Design II course material"
+  - "MA Filmmaking — Sound Design II course material.txt"
 
 # Editing II: Visual Design for Music
 "decoding musical structures for editing":
-  - "MA Filmmaking — Editing II course material"
+  - "MA Filmmaking — Editing II course material.txt"
 "constructing visual edit for music and songs":
-  - "MA Filmmaking — Editing II course material"
+  - "MA Filmmaking — Editing II course material.txt"
 
 # Editing II: Designing Montage
 "experiments of griffith":
-  - "The Film Sense - Sergei Eisenstein"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Film Sense - Sergei Eisenstein.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "soviet experiments":
-  - "The Film Sense - Sergei Eisenstein"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Film Sense - Sergei Eisenstein.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "identifying and understanding properties of a shot":
-  - "The Film Sense - Sergei Eisenstein"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Film Sense - Sergei Eisenstein.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "associating and contrasting properties of individual shots":
-  - "The Film Sense - Sergei Eisenstein"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Film Sense - Sergei Eisenstein.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "meanings and impact through juxtaposing properties through a cut":
-  - "The Film Sense - Sergei Eisenstein"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Film Sense - Sergei Eisenstein.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 
 # Editing II: Editing Genres I
 "genre conventions & editing techniques":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "action & altercation":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "construction of visual syntax":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "patterns and connections – matrix of narrative impact":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "use of pauses, silences, duration of shots, inserts, shot compositions":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "juxtapositions and timing (point of attack and release, attachment and detachment)":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "dramatic time & tension":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "film marketing models and mediums":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "audience traits and responses":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 "constructing trailers & promotionals":
-  - "The Technique of Film - Karel Reisz"
-  - "In the Blink of an Eye - Walter Murch"
+  - "The Technique of Film - Karel Reisz.txt"
+  - "In the Blink of an Eye - Walter Murch.txt"
 
 # Editing II: Narrative Structuring – Form and Time I
 "story structuring & narrative development":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "time as a controlling factor – flow and temporal stillness of plot":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "using time with sound and silence":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "punctuations in a narrative":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "connotations of a cut":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "rhythm and internal moments":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "creating character motivation & empathy":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "physical and psychological transitions in a film":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "narrative forms (mise-en-scène & montage)":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "temporal fragmentation in mise-en-scène":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "temporal construction in montage":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "techniques at different periods and movements in world cinema":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 "editing & mise-en-scène – practical exercise":
-  - "The Technique of Film and Video Editing - Ken Dancyger"
-  - "Cutting Rhythms - Karen Pearlman"
+  - "The Technique of Film and Video Editing - Ken Dancyger.txt"
+  - "Cutting Rhythms - Karen Pearlman.txt"
 
 # History of Cinema: Early Cinema
 "birth of cinema – early innovations and pioneers (lumière brothers)":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "thomas edison and early film experiments":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "the silent film era – key characteristics and filmmakers":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "d.w. griffith and early narrative structures":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "charlie chaplin":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "buster keaton and the art of silent comedy":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "georges méliès – magician of the cinema":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 
 # History of Cinema: The Golden Age of Hollywood
 "the studio system and hollywood's dominance":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "the rise of major studios (mgm, paramount, warner bros.)":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "iconic films and filmmakers of the 1930s and 1940s":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 
 # History of Cinema: World Cinema
 "german expressionism – visual style and themes":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "soviet montage theory – eisenstein and revolutionary cinema":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "italian neorealism – post-war realism and humanism":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "french new wave – breaking conventions and auteur theory":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "japanese cinema – akira kurosawa, yasujirō ozu":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "indian cinema – satyajit ray and parallel cinema":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 
 # History of Cinema: The New Hollywood
 "decline of the studio system and birth of new hollywood":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "influential directors – scorsese, spielberg, coppola":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "rise of independent film and the sundance phenomenon":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "cinema of the 1970s and 1980s – blockbusters and commercialization":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "emergence of the science fiction genre":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "global cinema – bollywood and asian cinema":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 
 # History of Cinema: Genres & Digital Revolution
 "development of key genres (horror, science fiction, romance)":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "genre hybrids and blurring of boundaries":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "influence of television and new media on genre films":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "digital revolution and contemporary cinema":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "cgi and special effects":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 "rise of streaming services and changing distribution":
-  - "MA Filmmaking — History of Cinema course material"
+  - "MA Filmmaking — History of Cinema course material.txt"
 
